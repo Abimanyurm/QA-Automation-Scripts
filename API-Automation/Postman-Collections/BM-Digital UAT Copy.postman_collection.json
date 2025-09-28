@@ -1,0 +1,1136 @@
+{
+	"info": {
+		"_postman_id": "e6dce056-2c32-40a2-838c-832053c5b87a",
+		"name": "BM-Digital UAT Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41520407",
+		"_collection_link": "https://hjhuih.postman.co/workspace/hjhuih-Workspace~90c93964-9100-4413-8385-486ff3bcfa62/collection/41520407-e6dce056-2c32-40a2-838c-832053c5b87a?action=share&source=collection_link&creator=41520407"
+	},
+	"item": [
+		{
+			"name": "Caution check",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27718/customervalidation/getcautionlistsummary\",\r\n    \"payload\": {\r\n        \"GetCautionListSummaryReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"GetCautionListSummary\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"CCL\"\r\n                }\r\n            },\r\n            \"IdNum\": \"1030116\",\r\n            \"IdType\": \"CR\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Caution check",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"https://uatdp:27718/customervalidation/getcautionlistsummary\",\r\n    \"payload\": {\r\n        \"GetCautionListSummaryReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"GetCautionListSummary\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"CCL\"\r\n                }\r\n            },\r\n            \"IdNum\": \"1030116\",\r\n            \"IdType\": \"CR\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{mms_url}}/digital/test",
+							"host": [
+								"{{mms_url}}"
+							],
+							"path": [
+								"digital",
+								"test"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 11 Aug 2025 10:30:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "423"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"23f-XUvxVuRqzzrN+U6jL0tSnYWEsZ8\""
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=16070400; includeSubDomains"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Origin"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"GetCautionListSummaryRes\": {\n        \"ResponseHeader\": {\n            \"APIContext\": {\n                \"APIName\": \"GetCautionListSummary\",\n                \"APIVersion\": \"1.0\"\n            },\n            \"ClientContext\": {\n                \"RequesterID\": \"APS\",\n                \"ReqRefNo\": \"20250811103049\",\n                \"ReqTimestamp\": \"2025-08-11T10:30:49.539\"\n            },\n            \"ServerContext\": {\n                \"ProviderID\": \"CCL\"\n            },\n            \"APIResponse\": {\n                \"RespRefNo\": \"143057652875\",\n                \"RespTimestamp\": \"2025-08-11T14:30:57.057\",\n                \"StatusCode\": \"0\"\n            }\n        },\n        \"DefaulterName\": \"OMAN SHAPOORJI COMPANY LLC\",\n        \"DocumentID\": \"1030116\",\n        \"DocumentType\": \"Commercial ID\",\n        \"LastChequeReturnedDate\": \"2024-06-23T12:00:00.000000\",\n        \"TotalCheques\": 4,\n        \"RecordDate\": \"2025-08-11T12:00:00.000000\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit acc info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cifNumber\":\"7358212\",\r\n    \"accountNo\":\"11111111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/68494ee0d1f8585cf7f543e8",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"68494ee0d1f8585cf7f543e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Merchant with Terminal",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/createmerchant\",\r\n    \"payload\": {\r\n        \"CreateMerchantReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"CreateMerchant\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.142\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"PRM\"\r\n                }\r\n            },\r\n            \"Applications\": {\r\n                \"Application\": [\r\n                    {\r\n                        \"CreatedBy\": \"oviya-superadmin\",\r\n                        \"InstitutionId\": \"303\",\r\n                        \"InstitutionName\": \"Bank Muscat\",\r\n                        \"MerCustomer\": [\r\n                            {\r\n                                \"MerAddresses\": {\r\n                                    \"MerAddress\": [\r\n                                        {\r\n                                            \"AddressType\": \"00101\",\r\n                                            \"Location\": \"LEGAL\",\r\n                                            \"Title\": \"Mr.\",\r\n                                            \"LastName\": \"sptestone\",\r\n                                            \"FirstName\": \"sptest\",\r\n                                            \"Address1\": \"P.O.BOX 67\",\r\n                                            \"Address2\": \"P.C 416\",\r\n                                            \"Address3\": \"JA'ALAN BANI BU ALI\",\r\n                                            \"Address4\": \"ASH SHARQIYAH\",\r\n                                            \"Address5\": \"Oman\",\r\n                                            \"City\": \"JA'ALAN BANI BU ALI\",\r\n                                            \"State\": \"MD\",\r\n                                            \"Country\": \"512\",\r\n                                            \"Zip\": \"416\",\r\n                                            \"County\": \"MCT\",\r\n                                            \"Mobile\": \"90927191\",\r\n                                            \"Tel1\": \"90927191\",\r\n                                            \"Email\": \"softpos4@testad.com\"\r\n                                        },\r\n                                        {\r\n                                            \"AddressType\": \"01101\",\r\n                                            \"Location\": \"COMMERCIAL\",\r\n                                            \"Title\": \"Mr.\",\r\n                                            \"LastName\": \"sptestone\",\r\n                                            \"FirstName\": \"sptest\",\r\n                                            \"Address1\": \"no.123 chennai\",\r\n                                            \"Address2\": \"H7HV+W4X, Muscat 111, Oman\",\r\n                                            \"Address3\": \"ALKHUWAIR\",\r\n                                            \"Address4\": \"SOUTH\",\r\n                                            \"Address5\": \"Oman\",\r\n                                            \"City\": \"ASH SHARQIYAH\",\r\n                                            \"State\": \"MD\",\r\n                                            \"Country\": \"512\",\r\n                                            \"Zip\": \"416\",\r\n                                            \"County\": \"MCT\",\r\n                                            \"Mobile\": \"90927191\",\r\n                                            \"Tel1\": \"90927191\",\r\n                                            \"Email\": \"softpos4@testad.com\"\r\n                                        }\r\n                                    ]\r\n                                },\r\n                                \"Extensions\": {\r\n                                    \"Extension\": [\r\n                                        {\r\n                                            \"FieldNo\": \"10003\",\r\n                                            \"Value\": \"grocery stores/supermarkets\"\r\n                                        },\r\n                                        {\r\n                                            \"FieldNo\": \"10007\",\r\n                                            \"Value\": \"NoRM\"\r\n                                        },\r\n                                        {\r\n                                            \"FieldNo\": \"10008\",\r\n                                            \"Value\": \"2 - Partnership\"\r\n                                        },\r\n                                        {\r\n                                            \"FieldNo\": \"10009\",\r\n                                            \"Value\": \"7358213\"\r\n                                        }\r\n                                    ]\r\n                                },\r\n                                \"MerAccounts\": {\r\n                                    \"MerAccount\": [\r\n                                        {\r\n                                            \"MerAddresses\": {\r\n                                                \"MerAddress\": [\r\n                                                    {\r\n                                                        \"AddressType\": \"00101\",\r\n                                                        \"Location\": \"LEGAL\",\r\n                                                        \"Title\": \"Mr.\",\r\n                                                        \"LastName\": \"sptestone\",\r\n                                                        \"FirstName\": \"sptest\",\r\n                                                        \"Address1\": \"P.O.BOX 67\",\r\n                                                        \"Address2\": \"P.C 416\",\r\n                                                        \"Address3\": \"JA'ALAN BANI BU ALI\",\r\n                                                        \"Address4\": \"ASH SHARQIYAH\",\r\n                                                        \"Address5\": \"Oman\",\r\n                                                        \"City\": \"JA'ALAN BANI BU ALI\",\r\n                                                        \"State\": \"MD\",\r\n                                                        \"Country\": \"512\",\r\n                                                        \"Zip\": \"416\",\r\n                                                        \"County\": \"MCT\",\r\n                                                        \"Mobile\": \"90927191\",\r\n                                                        \"Tel1\": \"90927191\",\r\n                                                        \"Email\": \"softpos4@testad.com\"\r\n                                                    },\r\n                                                    {\r\n                                                        \"AddressType\": \"01101\",\r\n                                                        \"Location\": \"COMMERCIAL\",\r\n                                                        \"Title\": \"Mr.\",\r\n                                                        \"LastName\": \"sptestone\",\r\n                                                        \"FirstName\": \"sptest\",\r\n                                                        \"Address1\": \"no.123 chennai\",\r\n                                                        \"Address2\": \"H7HV+W4X, Muscat 111, Oman\",\r\n                                                        \"Address3\": \"ALKHUWAIR\",\r\n                                                        \"Address4\": \"SOUTH\",\r\n                                                        \"Address5\": \"Oman\",\r\n                                                        \"City\": \"ASH SHARQIYAH\",\r\n                                                        \"State\": \"MD\",\r\n                                                        \"Country\": \"512\",\r\n                                                        \"Zip\": \"416\",\r\n                                                        \"County\": \"MCT\",\r\n                                                        \"Mobile\": \"90927191\",\r\n                                                        \"Tel1\": \"90927191\",\r\n                                                        \"Email\": \"softpos4@testad.com\"\r\n                                                    }\r\n                                                ]\r\n                                            },\r\n                                            \"Merchants\": {\r\n                                                \"Merchant\": [\r\n                                                    {\r\n                                                        \"MerAddresses\": {\r\n                                                            \"MerAddress\": [\r\n                                                                {\r\n                                                                    \"AddressType\": \"00101\",\r\n                                                                    \"Location\": \"LEGAL\",\r\n                                                                    \"Title\": \"Mr.\",\r\n                                                                    \"LastName\": \"sptestone\",\r\n                                                                    \"FirstName\": \"sptest\",\r\n                                                                    \"Address1\": \"P.O.BOX 67\",\r\n                                                                    \"Address2\": \"P.C 416\",\r\n                                                                    \"Address3\": \"JA'ALAN BANI BU ALI\",\r\n                                                                    \"Address4\": \"ASH SHARQIYAH\",\r\n                                                                    \"Address5\": \"Oman\",\r\n                                                                    \"City\": \"JA'ALAN BANI BU ALI\",\r\n                                                                    \"State\": \"MD\",\r\n                                                                    \"Country\": \"512\",\r\n                                                                    \"Zip\": \"416\",\r\n                                                                    \"County\": \"MCT\",\r\n                                                                    \"Mobile\": \"90927191\",\r\n                                                                    \"Tel1\": \"90927191\",\r\n                                                                    \"Email\": \"softpos4@testad.com\"\r\n                                                                },\r\n                                                                {\r\n                                                                    \"AddressType\": \"01101\",\r\n                                                                    \"Location\": \"COMMERCIAL\",\r\n                                                                    \"Title\": \"Mr.\",\r\n                                                                    \"LastName\": \"sptestone\",\r\n                                                                    \"FirstName\": \"sptest\",\r\n                                                                    \"Address1\": \"no.123 chennai\",\r\n                                                                    \"Address2\": \"H7HV+W4X, Muscat 111, Oman\",\r\n                                                                    \"Address3\": \"ALKHUWAIR\",\r\n                                                                    \"Address4\": \"SOUTH\",\r\n                                                                    \"Address5\": \"Oman\",\r\n                                                                    \"City\": \"ASH SHARQIYAH\",\r\n                                                                    \"State\": \"MD\",\r\n                                                                    \"Country\": \"512\",\r\n                                                                    \"Zip\": \"416\",\r\n                                                                    \"County\": \"MCT\",\r\n                                                                    \"Mobile\": \"90927191\",\r\n                                                                    \"Tel1\": \"90927191\",\r\n                                                                    \"Email\": \"softpos4@testad.com\"\r\n                                                                }\r\n                                                            ]\r\n                                                        },\r\n                                                        \"Extensions\": {\r\n                                                            \"Extension\": [\r\n                                                                {\r\n                                                                    \"FieldNo\": \"20101\",\r\n                                                                    \"Value\": \"F1\"\r\n                                                                },\r\n                                                                {\r\n                                                                    \"FieldNo\": \"20112\",\r\n                                                                    \"Value\": \"F1M1\"\r\n                                                                }\r\n                                                            ]\r\n                                                        },\r\n                                                        \"Terminals\": {\r\n                                                            \"Terminal\": [\r\n                                                                {\r\n                                                                    \"Number\": \"10000235\",\r\n                                                                    \"Description\": \"testingone\",\r\n                                                                    \"ProductSerno\": \"176\",\r\n                                                                    \"ProductName\": \"CLOTHING\",\r\n                                                                    \"Template\": \"67\",\r\n                                                                    \"AlternateNumber\": \"\",\r\n                                                                    \"Manufacturer\": \"Device\",\r\n                                                                    \"ModelNo\": \"A75\",\r\n                                                                    \"Serial\": \"9999967890\",\r\n                                                                    \"Currency\": \"512\",\r\n                                                                    \"Category\": \"5411\",\r\n                                                                    \"DccFlag\": \"0\",\r\n                                                                    \"CardHolderPresent\": \"1\",\r\n                                                                    \"Active\": \"01\",\r\n                                                                    \"CardPresent\": \"0\",\r\n                                                                    \"EntryModes\": \"12559\",\r\n                                                                    \"ReconcileBeforeCapture\": \"Y\",\r\n                                                                    \"FeeProfName\": \"Tprofile (01)  A=0   M=0  MIN=0\",\r\n                                                                    \"Extensions\": {\r\n                                                                        \"Extension\": [\r\n                                                                            {\r\n                                                                                \"FieldNo\": \"20113\",\r\n                                                                                \"Value\": \"F1M1T2\"\r\n                                                                            }\r\n                                                                        ]\r\n                                                                    }\r\n                                                                }\r\n                                                            ]\r\n                                                        },\r\n                                                        \"ProductName\": \"CLOTHING\",\r\n                                                        \"Category\": \"5411\",\r\n                                                        \"TrxnType\": \"7\",\r\n                                                        \"Currency\": \"512\",\r\n                                                        \"StGeneral\": \"NORM\",\r\n                                                        \"AllowTips\": \"0\",\r\n                                                        \"ComPercentAmount\": \"\",\r\n                                                        \"ComProfSerno\": \"316\",\r\n                                                        \"FeeProfSerno\": \"878\",\r\n                                                        \"VatProfSerno\": \"1686\",\r\n                                                        \"ComTrxnFlatAmount\": \"0\",\r\n                                                        \"FraudWeightLimit\": \"0\",\r\n                                                        \"StEmbossing\": \"\",\r\n                                                        \"CommercialName\": \"testingone\",\r\n                                                        \"LegalName\": \"Short.name 7358213\",\r\n                                                        \"VatRegNumber\": \"333333333\",\r\n                                                        \"EmbPin\": \"\",\r\n                                                        \"Zip\": \"416\",\r\n                                                        \"RegionCode\": \"40015345\",\r\n                                                        \"Address1\": \"0\",\r\n                                                        \"Address2\": \"416\",\r\n                                                        \"City\": \"ash sharqiyah\",\r\n                                                        \"Country\": \"512\",\r\n                                                        \"FirstName\": \"sptest\",\r\n                                                        \"LastName\": \"sptestone\",\r\n                                                        \"Email\": \"softpos4@testad.com\",\r\n                                                        \"TelephoneNo\": \"90927191\",\r\n                                                        \"MatchPercentAboveOrig\": \"0\",\r\n                                                        \"MatchPercentBelowOrig\": \"0\",\r\n                                                        \"MaxAuthLimit\": \"0\",\r\n                                                        \"FloorLimit\": \"0\"\r\n                                                    }\r\n                                                ],\r\n                                                \"Extensions\": {\r\n                                                    \"Extension\": [\r\n                                                        {\r\n                                                            \"FieldNo\": \"20101\",\r\n                                                            \"Value\": \"F1\"\r\n                                                        },\r\n                                                        {\r\n                                                            \"FieldNo\": \"20112\",\r\n                                                            \"Value\": \"F1M1\"\r\n                                                        }\r\n                                                    ]\r\n                                                }\r\n                                            },\r\n                                            \"MerAccName\": \"testingone\",\r\n                                            \"ProductName\": \"CLOTHING\",\r\n                                            \"ComTotalFlatAmount\": \"1\",\r\n                                            \"ComCombination\": \"0\",\r\n                                            \"StGeneral\": \"NORM\",\r\n                                            \"ComProfSerno\": \"316\",\r\n                                            \"FeeProfSerno\": \"878\",\r\n                                            \"VatProfSerno\": \"1686\",\r\n                                            \"PmntIndicator\": \"\",\r\n                                            \"ComIndicator\": \"\",\r\n                                            \"StmtDateInc\": \"\",\r\n                                            \"PmntDateInc\": \"-1\",\r\n                                            \"ComDateInc\": \"-1\",\r\n                                            \"PmntTriggerBal\": \"\",\r\n                                            \"StmtMinActivity\": \"\",\r\n                                            \"StmtMinBal\": \"\",\r\n                                            \"PmntMinBal\": \"\",\r\n                                            \"PmntMinActivity\": \"\",\r\n                                            \"Currency\": \"512\",\r\n                                            \"Iban\": \"\",\r\n                                            \"BankName\": \"Bank Muscat\",\r\n                                            \"BankBranch\": \"test\",\r\n                                            \"BankAccount\": \"0001073582130017\",\r\n                                            \"BankAccName\": \"sptestsptestone\",\r\n                                            \"StmtMailOption\": \"1\"\r\n                                        }\r\n                                    ]\r\n                                },\r\n                                \"Name\": \"sptestsptestone\",\r\n                                \"CName\": \"testingone\",\r\n                                \"LName\": \"Short.name 7358213\",\r\n                                \"ProductName\": \"CLOTHING\",\r\n                                \"StGeneral\": \"NORM\"\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Merchant and Terminal update",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/updatemerchantentity\",\r\n    \"payload\": {\r\n        \"UpdateMerchantEntityReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"UpdateMerchantEntity\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.142\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"PRM\"\r\n                }\r\n            },\r\n            \"MerCustomer\": {\r\n                \"RefType\": \"MERCHANTNUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"CommercialName\": \"98765432\",\r\n                \"LegalName\": \"98765432\"\r\n            },\r\n            \"MerAccount\": {\r\n                \"RefType\": \"MERCHANTNUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"StGeneral\": \"NORM\",\r\n                \"ComProfSerno\": \"194\",\r\n                \"FeeProfSerno\": \"186\",\r\n                \"VatProfSerno\": \"1686\",\r\n                \"BankBranch\": \"ABL\",\r\n                \"BankAccount\": \"323123123123\",\r\n                \"BankAccName\": \"TEST\"\r\n            },\r\n            \"Merchant\": {\r\n                \"RefType\": \"NUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"StGeneral\": \"NORM\",\r\n                \"ComProfSerno\": \"194\",\r\n                \"FeeProfSerno\": \"186\",\r\n                \"VatProfSerno\": \"1686\",\r\n                \"CommercialName\": \"TEST\",\r\n                \"LegalName\": \"LEGAL NAME\",\r\n                \"VatRegNumber\": \"121212\",\r\n                \"ZipCode\": \"211\",\r\n                \"Address1\": \"TEST ADD\",\r\n                \"Address2\": \"TEST ADD\",\r\n                \"City\": \"MINTRIB\",\r\n                \"State\": \"MU\",\r\n                \"Country\": \"512\",\r\n                \"FirstName\": \"TEST ADD\",\r\n                \"LastName\": \"TEST ADD\",\r\n                \"Email\": \"test@testad.com\"\r\n            },\r\n            \"Terminal\": {\r\n                \"RefType\": \"NUMBER\",\r\n                \"RefId\": \"22151563\",\r\n                \"Description\": \"TestCust\",\r\n                \"Manufacturer\": \"Test\",\r\n                \"ModelNo\": \"Test\",\r\n                \"Serial\": \"Test\",\r\n                \"Category\": \"5611\"\r\n            },\r\n            \"MerAddress\": {\r\n                \"RefType\": \"MERCHANTNUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"FirstName\": \"TEST\",\r\n                \"LastName\": \"TEST\",\r\n                \"Address1\": \"TEST ADD\",\r\n                \"Address2\": \"TEST ADD\",\r\n                \"Address3\": \"TEST ADD\",\r\n                \"Address4\": \"TEST ADD\",\r\n                \"Address5\": \"TEST ADD\",\r\n                \"City\": \"MUSCAT\",\r\n                \"State\": \"MU\",\r\n                \"Country\": \"512\",\r\n                \"County\": \"MU\",\r\n                \"Zip\": \"211\",\r\n                \"Mobile\": \"99336427\",\r\n                \"Telephone1\": \"0215765675\",\r\n                \"Email\": \"test@testad.com\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Merchant update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/updatemerchantentity\",\r\n    \"payload\": {\r\n        \"UpdateMerchantEntityReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"UpdateMerchantEntity\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.142\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"PRM\"\r\n                }\r\n            },\r\n            \"MerCustomer\": {\r\n                \"RefType\": \"MERCHANTNUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"CommercialName\": \"98765432\",\r\n                \"LegalName\": \"98765432\"\r\n            },\r\n            \"MerAccount\": {\r\n                \"RefType\": \"MERCHANTNUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"StGeneral\": \"NORM\",\r\n                \"ComProfSerno\": \"194\",\r\n                \"FeeProfSerno\": \"186\",\r\n                \"VatProfSerno\": \"1686\",\r\n                \"BankBranch\": \"ABL\",\r\n                \"BankAccount\": \"323123123123\",\r\n                \"BankAccName\": \"TEST\"\r\n            },\r\n            \"Merchant\": {\r\n                \"RefType\": \"NUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"StGeneral\": \"NORM\",\r\n                \"ComProfSerno\": \"194\",\r\n                \"FeeProfSerno\": \"186\",\r\n                \"VatProfSerno\": \"1686\",\r\n                \"CommercialName\": \"TEST\",\r\n                \"LegalName\": \"LEGAL NAME\",\r\n                \"VatRegNumber\": \"121212\",\r\n                \"ZipCode\": \"211\",\r\n                \"Address1\": \"TEST ADD\",\r\n                \"Address2\": \"TEST ADD\",\r\n                \"City\": \"MINTRIB\",\r\n                \"State\": \"MU\",\r\n                \"Country\": \"512\",\r\n                \"FirstName\": \"TEST ADD\",\r\n                \"LastName\": \"TEST ADD\",\r\n                \"Email\": \"test@testad.com\"\r\n            },\r\n            \"MerAddress\": {\r\n                \"RefType\": \"MERCHANTNUMBER\",\r\n                \"RefId\": \"571300000015477\",\r\n                \"FirstName\": \"TEST\",\r\n                \"LastName\": \"TEST\",\r\n                \"Address1\": \"TEST ADD\",\r\n                \"Address2\": \"TEST ADD\",\r\n                \"Address3\": \"TEST ADD\",\r\n                \"Address4\": \"TEST ADD\",\r\n                \"Address5\": \"TEST ADD\",\r\n                \"City\": \"MUSCAT\",\r\n                \"State\": \"MU\",\r\n                \"Country\": \"512\",\r\n                \"County\": \"MU\",\r\n                \"Zip\": \"211\",\r\n                \"Mobile\": \"99336427\",\r\n                \"Telephone1\": \"0215765675\",\r\n                \"Email\": \"test@testad.com\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{mms_url}}/digital/test",
+							"host": [
+								"{{mms_url}}"
+							],
+							"path": [
+								"digital",
+								"test"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 04 Sep 2025 09:29:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "420"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"22b-PMT71Jvuayp3WqJ8Ie8c4Rn6OyE\""
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=16070400; includeSubDomains"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "https://172.20.222.29:30443"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Origin"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://nposuatrp.bmtest.om https://nposuatapi.bmtest.om https://nposuatsso.bmtest.om https://172.20.222.29:30443 https://nposuatpb.bmtest.om https://static.in.lyra.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://nposuatrp.bmtest.om https://nposuatapi.bmtest.om https://nposuatsso.bmtest.om https://172.20.222.29:30443 https://nposuatpb.bmtest.om; object-src 'none'; base-uri 'self'; frame-src 'none'; frame-ancestors 'self';"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"UpdateMerchantEntityRes\": {\n        \"ResponseHeader\": {\n            \"APIContext\": {\n                \"APIName\": \"UpdateMerchantEntity\",\n                \"APIVersion\": \"1.0\"\n            },\n            \"ClientContext\": {\n                \"ReqRefNo\": \"20250904092921\",\n                \"ReqTimestamp\": \"2025-09-04T09:29:21.189\",\n                \"RequesterID\": \"APS\",\n                \"TerminalID\": \"\"\n            },\n            \"ServerContext\": {\n                \"ProviderID\": \"PRM\"\n            },\n            \"APIResponse\": {\n                \"RespRefNo\": \"132923745570\",\n                \"RespTimestamp\": \"2025-09-04T13:29:24.024\",\n                \"StatusCode\": \"0\"\n            },\n            \"OverrideMessage\": \"\"\n        },\n        \"ApplicationCreateDate\": \"0001-01-01\",\n        \"Type\": \"mercustomer\",\n        \"Serno\": {\n            \"Value\": \"47274\",\n            \"Null\": \"false\"\n        },\n        \"ActionType\": \"Update\",\n        \"Identifier\": \"571300812           \"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Maintain extension",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/maintainextensions\",\r\n    \"payload\": {\r\n        \"MaintainExtensionsReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"MaintainExtensions\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"PRM\"\r\n                }\r\n            },\r\n            \"Number\": \"80501663\",\r\n            \"Type\": \"Terminal\",\r\n            \"Action\": \"Modify\",\r\n            \"Extensions\": {\r\n                \"Number\": \"20095\",\r\n                \"Value\": \"BANKMUSCAT\",\r\n                \"DataVersion\": \"0\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inquiery check",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/inquireacquirerccentity\",\r\n    \"payload\": {\r\n        \"InquireAcquirerCCEntityReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"InquireAcquirerCCEntity\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.228\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"PRM\"\r\n                }\r\n            },\r\n            \"Entity\": \"Terminal\",\r\n            \"Reference\": \"Terminal\",\r\n            \"SearchValue\": \"20000027\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Inquiery check",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/inquireacquirerccentity\",\r\n    \"payload\": {\r\n        \"InquireAcquirerCCEntityReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"InquireAcquirerCCEntity\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.228\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"PRM\"\r\n                }\r\n            },\r\n            \"Entity\": \"Terminal\",\r\n            \"Reference\": \"Terminal\",\r\n            \"SearchValue\": \"20000027\"\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{mms_url}}/digital/test",
+							"host": [
+								"{{mms_url}}"
+							],
+							"path": [
+								"digital",
+								"test"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "Text",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 16 Sep 2025 08:07:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1276"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"a1f-8iNw1UJ56Iv2rpocJ2Jzo+atHWY\""
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=16070400; includeSubDomains"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "https://172.20.222.29:30443"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Origin"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, OPTIONS, PUT, DELETE"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self' data:; script-src 'self' 'unsafe-inline' https://nposuatrp.bmtest.om https://nposuatapi.bmtest.om https://nposuatsso.bmtest.om https://172.20.222.29:30443 https://nposuatpb.bmtest.om https://static.in.lyra.com https://maps.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://nposuatrp.bmtest.om https://nposuatapi.bmtest.om https://nposuatsso.bmtest.om https://172.20.222.29:30443 https://nposuatpb.bmtest.om; object-src 'self' data: https://nposuatrp.bmtest.om https://nposuatapi.bmtest.om https://nposuatsso.bmtest.om; frame-src 'self' data:; base-uri 'self'; frame-ancestors 'self';"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "BM01496644=01c48fc5143130e85171ca1cb10a9e87d5b6993e9af19a761650803576bf619bcba685ee45c4e70a668f748c10fc30a8e1a926cfbb; Path=/; Domain=.nposuatapi.bmtest.om; Secure; HttpOnly"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"InquireAcquirerCCEntityRes\": {\n        \"ResponseHeader\": {\n            \"APIContext\": {\n                \"APIName\": \"InquireAcquirerCCEntity\",\n                \"APIVersion\": \"1.0\"\n            },\n            \"ClientContext\": {\n                \"ReqRefNo\": \"20250916080710\",\n                \"ReqTimestamp\": \"2025-09-16T08:07:10.973\",\n                \"RequesterID\": \"APS\",\n                \"TerminalID\": \"\"\n            },\n            \"ServerContext\": {\n                \"ProviderID\": \"PRM\"\n            },\n            \"APIResponse\": {\n                \"RespRefNo\": \"120718628961\",\n                \"RespTimestamp\": \"2025-09-16T12:07:18.018\",\n                \"StatusCode\": \"0\"\n            },\n            \"OverrideMessage\": {}\n        },\n        \"Customer\": {\n            \"CustomerNumber\": \"571200195\",\n            \"Address\": {},\n            \"Accounts\": {\n                \"AccountDetails\": {\n                    \"Number\": \"571200005130\",\n                    \"ExtensionFields\": {},\n                    \"Financial\": {},\n                    \"Address\": {},\n                    \"Locations\": {\n                        \"LocationDetails\": {\n                            \"MerchantType\": \"0\",\n                            \"Number\": \"571200000004945\",\n                            \"TrxnReject\": \"0\",\n                            \"CVVRequired\": \"0\",\n                            \"FloorLimit\": \"0\",\n                            \"MaxAuthAmount\": \"0\",\n                            \"TransactionTypes\": \"0\",\n                            \"Address\": {},\n                            \"Active\": \"false\",\n                            \"SendToFraudguard\": \"false\",\n                            \"SendPotentialFraudTrxns\": \"false\",\n                            \"RiskLevel\": \"0\",\n                            \"MatchPercentageAboveOriginal\": \"0\",\n                            \"MatchPercentageBelowOriginal\": \"0\",\n                            \"ExtensionFields\": {\n                                \"ExtensionField\": {}\n                            },\n                            \"Terminals\": {\n                                \"TerminalDetails\": {\n                                    \"Number\": \"20000027\",\n                                    \"Serial\": \"99986005851\",\n                                    \"Model\": \"F210\",\n                                    \"DateInstalled\": \"3/11/2025\",\n                                    \"Currency\": \"512\",\n                                    \"Category\": \"7210\",\n                                    \"DccFlag\": \"0\",\n                                    \"Active\": \"Y\",\n                                    \"Address\": {\n                                        \"Location\": \"home\",\n                                        \"Title\": \"Mr.\",\n                                        \"LastName\": \"Al Balushi\",\n                                        \"FirstName\": \"AAISHA\",\n                                        \"Address1\": \"134\",\n                                        \"City\": \"al batinah\",\n                                        \"State\": \"RJ \",\n                                        \"Country\": \"OMN\",\n                                        \"ZIP\": \"106\",\n                                        \"Telephone1\": \"92330831\",\n                                        \"Mobile\": \"92330831\"\n                                    },\n                                    \"ExtensionFields\": {\n                                        \"ExtensionField\": {}\n                                    },\n                                    \"TemplateCode\": \"188DEFAULT\",\n                                    \"Product\": \"92\",\n                                    \"Type\": \"8\",\n                                    \"Subtype\": \"0\",\n                                    \"Protocol\": \"ISO\",\n                                    \"ReconcileBeforeCapture\": \"Y\",\n                                    \"Capabilities\": {\n                                        \"Capture\": \"false\",\n                                        \"Pin\": \"true\",\n                                        \"Key\": \"true\",\n                                        \"Voice\": \"true\",\n                                        \"MagneticStripe\": \"true\",\n                                        \"Chip\": \"true\",\n                                        \"Reconcile\": \"true\",\n                                        \"DynamicKeyExchange\": \"false\",\n                                        \"MagneticContactless\": \"true\",\n                                        \"ChipContactless\": \"true\",\n                                        \"PartialApproval\": \"false\",\n                                        \"CustomPaymentService\": \"false\",\n                                        \"TerminalLineEncryption\": \"false\",\n                                        \"BatchUpload\": \"false\",\n                                        \"NoCVM\": \"false\",\n                                        \"PurchaseAmountOnly\": \"false\"\n                                    },\n                                    \"CardPresence\": \"0\",\n                                    \"CardholderPresence\": \"1\",\n                                    \"EntryModes\": {\n                                        \"Voice\": \"true\",\n                                        \"Swipe\": \"false\",\n                                        \"Key\": \"false\",\n                                        \"Chip\": \"false\",\n                                        \"NonSecure\": \"false\",\n                                        \"SecureChain\": \"false\",\n                                        \"ThreeDSecure\": \"false\",\n                                        \"UncertainSwipe\": \"false\",\n                                        \"ChipFallback\": \"false\",\n                                        \"Recurring\": \"false\",\n                                        \"NonAuthenticated\": \"false\",\n                                        \"MagneticFallback\": \"false\",\n                                        \"ContactlessChip\": \"false\",\n                                        \"ContactlessMag\": \"false\",\n                                        \"CardLess\": \"false\",\n                                        \"UncertainChip\": \"false\",\n                                        \"ThreeDSecureAttempted\": \"false\",\n                                        \"ThreeDSecureCapable\": \"false\",\n                                        \"MerchantNo3D\": \"false\",\n                                        \"MerchantRiskBased\": \"false\",\n                                        \"PanViaServer\": \"false\",\n                                        \"PanViabankApplication\": \"false\"\n                                    },\n                                    \"PinBlockFormat\": \"01\",\n                                    \"PinBlockEncryption\": \"U\"\n                                }\n                            },\n                            \"DelayPaymentDays\": \"0\",\n                            \"Wallets\": {}\n                        }\n                    },\n                    \"DelayPaymentDays\": \"0\"\n                }\n            },\n            \"ExtensionFields\": {\n                \"ExtensionField\": {}\n            }\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "MALA check",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27718/customervalidation/fetchcorporatecreditscore\",\r\n    \"payload\": {\r\n        \"FetchCorporateCreditScoreReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"FetchCorporateCreditScore\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"OCB\"\r\n                }\r\n            },\r\n            \"Reports\": {\r\n                \"ProductType\": \"CommercialRegistrationNumber\",\r\n                \"RegistrationNo\": \"1030116\",\r\n                \"RegistrationNoExpirationDate\": \"2025-02-22\",\r\n                \"InquiryReason\": \"EvaluationOfCurrentCustomerSupplierPartnerOrOwnEmployee\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "MALA check",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\": \"https://uatdp:27718/customervalidation/fetchcorporatecreditscore\",\r\n    \"payload\": {\r\n        \"FetchCorporateCreditScoreReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"FetchCorporateCreditScore\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"OCB\"\r\n                }\r\n            },\r\n            \"Reports\": {\r\n                \"ProductType\": \"CommercialRegistrationNumber\",\r\n                \"RegistrationNo\": \"1030116\",\r\n                \"RegistrationNoExpirationDate\": \"2025-02-22\",\r\n                \"InquiryReason\": \"EvaluationOfCurrentCustomerSupplierPartnerOrOwnEmployee\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{mms_url}}/digital/test",
+							"host": [
+								"{{mms_url}}"
+							],
+							"path": [
+								"digital",
+								"test"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\n    \"FetchCorporateCreditScoreRes\": {\n        \"ResponseHeader\": {\n            \"ClientContext\": {\n                \"RequesterID\": \"APS\",\n                \"ReqRefNo\": \"20250717122737\",\n                \"ReqTimestamp\": \"2025-07-17T12:27:37.304\"\n            },\n            \"APIContext\": {\n                \"APIName\": \"FetchCorporateCreditScore\",\n                \"APIVersion\": \"1.0\"\n            },\n            \"ServerContext\": {\n                \"ProviderID\": \"OCB\"\n            },\n            \"APIResponse\": {\n                \"RespRefNum\": \"162740115395\",\n                \"ResTimeStamp\": \"2025-07-17 16:27:43.016404\",\n                \"StatusCode\": \"0\"\n            }\n        },\n        \"Report\": {\n            \"CompanyName\": \"OMAN SHAPOORJI COMPANY LLC\",\n            \"BusinessStatus\": \"Active\",\n            \"Score\": -1,\n            \"Grade\": \"XX\",\n            \"ProbabilityOfDefault\": -1\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Terminal only create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/createmerchant\",\r\n    \"payload\": {\r\n        \"CreateMerchantReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"CreateMerchant\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.142\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"PRM\"\r\n                }\r\n            },\r\n            \"Applications\": {\r\n                \"Application\": [\r\n                    {\r\n                        \"CreatedBy\": \"oviya-superadmin\",\r\n                        \"InstitutionId\": \"303\",\r\n                        \"InstitutionName\": \"Bank Muscat\",\r\n                        \"MerCustomer\": [\r\n                            {\r\n                                \"MerAccounts\": {\r\n                                    \"MerAccount\": [\r\n                                        {\r\n                                            \"Merchants\": {\r\n                                                \"Merchant\": [\r\n                                                    {\r\n                                                        \"Terminals\": {\r\n                                                            \"Terminal\": [\r\n                                                                {\r\n                                                                    \"MerRefId\": \"571300000016434\",\r\n                                                                    \"MerRefType\": \"NUMBER\",\r\n                                                                    \"Action\": \"createTerminal\",\r\n                                                                    \"Number\": \"10000191\",\r\n                                                                    \"Description\": \"DMO Transaction\",\r\n                                                                    \"ProductSerno\": \"176\",\r\n                                                                    \"ProductName\": \"CLOTHING\",\r\n                                                                    \"Template\": \"67\",\r\n                                                                    \"AlternateNumber\": \"NEW\",\r\n                                                                    \"Manufacturer\": \"acino\",\r\n                                                                    \"ModelNo\": \"F210\",\r\n                                                                    \"Serial\": \"995654987\",\r\n                                                                    \"Currency\": \"512\",\r\n                                                                    \"Category\": \"5411\",\r\n                                                                    \"DccFlag\": \"0\",\r\n                                                                    \"CardHolderPresent\": \"1\",\r\n                                                                    \"Active\": \"01\",\r\n                                                                    \"CardPresent\": \"1\",\r\n                                                                    \"EntryModes\": \"12559\",\r\n                                                                    \"ReconcileBeforeCapture\": \"N\",\r\n                                                                    \"FeeProfName\": \"Tprofile (01)  A=0   M=0  MIN=0\",\r\n                                                                    \"Extensions\": {\r\n                                                                        \"Extension\": [\r\n                                                                            {\r\n                                                                                \"FieldNo\": \"20113\",\r\n                                                                                \"Value\": \"F1M1T1\"\r\n                                                                            }\r\n                                                                        ]\r\n                                                                    }\r\n                                                                }\r\n                                                            ]\r\n                                                        }\r\n                                                    }\r\n                                                ]\r\n                                            }\r\n                                        }\r\n                                    ]\r\n                                }\r\n                            }\r\n                        ]\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Full customer details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27715/customers/fetchcustomerfulldetails\",\r\n    \"payload\": {\r\n        \"FetchCustomerFullDetailsReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"FetchCustomerFullDetails\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"172.20.222.130\",\r\n                    \"RequestType\": \"CUSTDTL\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"T24\"\r\n                }\r\n            },\r\n            \"CustomerId\": \"7358212\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Merchant activate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"merchant\",\r\n    \"merchantId\":\"663d1bfd24e77dfa6f9eb693\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Digital record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"delete\",\r\n    \"cifNumber\":\"7358212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cif\": \"6032925\",\r\n    \"sessionId\": \"89z1BX8Kj6ddr9UbrWA-Jpb\",\r\n    \"userId\": \"TESTMAKER42634UAT2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://npossitapi.bmtest.om/user/auth/sso/refresh-token",
+					"protocol": "https",
+					"host": [
+						"npossitapi",
+						"bmtest",
+						"om"
+					],
+					"path": [
+						"user",
+						"auth",
+						"sso",
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MFILTER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://identityscan.intellplus.in/single/scan\",\r\n    \"payload\": {\r\n        \"mobile_number\": \"90927191\",\r\n        \"scan_type\": \"full_scan\",\r\n        \"x-api-key\": \"CREDOPAY56347q68457676992834tq76527457\",\r\n        \"Name\": \"First Name \",\r\n        \"additional_info\": [\r\n            {\r\n                \"email\": \"sajida@testad.com\"\r\n            },\r\n            {\r\n                \"mobile_Number\": \"90927192\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "External merchant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/registerextrenalmerchant\",\r\n    \"payload\": {\r\n        \"RegisterExtrenalMerchantReq\": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"RegisterExtrenalMerchant\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"APS\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.142\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"CAM\"\r\n                }\r\n            },\r\n            \"MerchantNo\": \"571300000015477\",\r\n            \"CustomerID\": \"7358212UAT\",\r\n            \"CompanyTypeID\": \"BFS_PTN\",\r\n            \"CompanyType\": \"Partnership\",\r\n            \"CommercialName\": \"testingone\",\r\n            \"WebsiteURL\": \"https://qadashboard.ccavenue.com\",\r\n            \"City\": \"ash sharqiyah\",\r\n            \"State\": \"MD\",\r\n            \"Address\": \"santa cruz\",\r\n            \"ZipCode\": \"416\",\r\n            \"Pobox\": \"P.O.BOX 67\",\r\n            \"BusinessContactPerson\": \"yuvaraj\",\r\n            \"BusinessEmail\": \"yuvaraj.p@credopay.com\",\r\n            \"BusinessPhone\": \"92208673\",\r\n            \"Mobile\": \"92208673\",\r\n            \"Resellercode\": \"989\",\r\n            \"SeamlessIntegration\": \"N\",\r\n            \"BlockRefund\": \"N\",\r\n            \"MultipleRefund\": \"N\",\r\n            \"MarsRefundMakerChecker\": \"N\",\r\n            \"SmartPayVault\": \"N\",\r\n            \"DisplayOrderNo\": \"N\",\r\n            \"DisplayMerchantName\": \"N\",\r\n            \"AutoConfirm\": \"N\",\r\n            \"AddGatewayAccount\": \"N\",\r\n            \"IntegrationDetails\": {\r\n                \"Integration\": [\r\n                    {\r\n                        \"IntegrationType\": \"ONUSDEBIT\",\r\n                        \"Mid\": \"571300000015477\",\r\n                        \"PrimeMid\": \"571300000015477\",\r\n                        \"MidName\": \"yuvaraj\",\r\n                        \"BinSupported\": \"Domestic\",\r\n                        \"Tid\": \"22151563\",\r\n                        \"MccCode\": \"5411\",\r\n                        \"TxnType\": \"sale\",\r\n                        \"Simid\": \"N\",\r\n                        \"MPI\": \"Y\",\r\n                        \"AuthCancel\": \"N\",\r\n                        \"Status\": \"ACTI\"\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ingenico",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/createorupdateextterminal\",\r\n    \"payload\": {\r\n        \"CreateOrUpdateExtTerminaReq  \": {\r\n            \"RequestHeader\": {\r\n                \"APIContext\": {\r\n                    \"APIName\": \"CreateOrUpdateExtTerminal\",\r\n                    \"APIVersion\": \"1.0\"\r\n                },\r\n                \"ClientContext\": {\r\n                    \"RequesterID\": \"IB\",\r\n                    \"ReqRefNo\": \"{{rrn}}\",\r\n                    \"ReqTimestamp\": \"{{times}}\",\r\n                    \"TerminalID\": \"192.168.10.142\"\r\n                },\r\n                \"ServerContext\": {\r\n                    \"ProviderID\": \"ING\"\r\n                }\r\n            },\r\n            \"TerminalID\": \"22151563\",\r\n            \"MerchantID\": \"571300000015477\",\r\n            \"RequestType\": \"CREATE\",\r\n            \"SerialNo\": \"98765432\",\r\n            \"SupervisorPassword\": \"98765432\",\r\n            \"Task Profile\": \"1\",\r\n            \"TransactionPermission\": 11,\r\n            \"DefaultTransaction\": \"purchase\",\r\n            \"FloorLimit\": 1,\r\n            \"BizParam\": 1,\r\n            \"Hardware\": 13,\r\n            \"ContactlessEMV\": 11,\r\n            \"Range\": 1,\r\n            \"Range2\": 1,\r\n            \"SRDProfile\": 1,\r\n            \"QRProfile\": 1,\r\n            \"AndroidProfile\": 1,\r\n            \"Services\": 1,\r\n            \"RPDL\": 82,\r\n            \"Domestic\": 1,\r\n            \"Domestic2\": 1,\r\n            \"EMV\": 4,\r\n            \"Receipt\": 1,\r\n            \"CardType\": [\r\n                \"Visa\",\r\n                \"MasterCard\"\r\n            ]\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visa create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://uatdp:27343/merchant/createorupdateextterminal\",\r\n    \"payload\": {\r\n        \"searchTerminatedRequest\": {\r\n            \"retroAlertIfNoMatch\": \"false\",\r\n            \"acquirerBID\": \"10048640\",\r\n            \"acquirerCountryOrRegion\": \"JP\",\r\n            \"globalSearch\": \"true\",\r\n            \"terminatedRecordSearchCriteria\": {\r\n                \"category\": \"0\",\r\n                \"DBAName\": \"Zapper Photoshop Ltd\",\r\n                \"legalName\": \"Zapper Ltd\",\r\n                \"address\": {\r\n                    \"streetAddress\": \"80 Wood Street\",\r\n                    \"city\": \"Londo\",\r\n                    \"zipOrPostalCode\": \"NE12 1FB\",\r\n                    \"countryOrRegion\": \"ZA\",\r\n                    \"businessPhoneNumbers\": [\r\n                        \"2022071009\"\r\n                    ],\r\n                    \"businessEmailAddress\": \"test@test.com\",\r\n                    \"merchantCategoryCodes\": [\r\n                        \"5411\"\r\n                    ],\r\n                    \"tradeOverInternet\": false,\r\n                    \"businessRegistrationNumber\": \"BIN2022071909\",\r\n                    \"principals\": [\r\n                        {\r\n                            \"name\": \"Name Test\",\r\n                            \"businessPhoneNumber\": \"20220710019\",\r\n                            \"residentIDOrNationalID\": \"07043453\"\r\n                        }\r\n                    ]\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/digital/test",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"digital",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Terminal change Log",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IkJNLU1NUy0yMDIzMDMxNDAzMjAyMyIsImNyZWF0ZWRCeSI6InN1cGVyYWRtaW4iLCJpYXQiOjE3MDEzNDQ1NDQsImV4cCI6MjAxNjcwNDU0NH0.z1af6I1w1wpxq7qf1PEBuW0sVNwWn1CqQaX6vL0PaI80cLV6WpLhTjI7XIsDfwWJAikGq2fqiP6Tlpf2Ml3PrQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mms_url}}/terminal/differences/66d80fdf9fd05a3d",
+					"host": [
+						"{{mms_url}}"
+					],
+					"path": [
+						"terminal",
+						"differences",
+						"66d80fdf9fd05a3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.globals.set(\"rrn\", new Date().toISOString().replace(/[-:T.Z]/g, '').slice(0, 14));\r",
+					"pm.globals.set(\"times\", new Date().toISOString().replace(/Z/g, ''));\r",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "mms_url",
+			"value": "https://nposuatapi.bmtest.om/mms/v1",
+			"type": "string"
+		}
+	]
+}
