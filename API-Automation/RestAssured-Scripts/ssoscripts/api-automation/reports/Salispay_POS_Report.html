@@ -1,0 +1,2161 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Salispay – POS Terminal Dashboard</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');body{font-family:'Share Tech Mono', monospace;background:#0b0c10;color:#c5c6c7;}.nav-wrapper{background:#1f2833;color:#66fcf1;font-weight:bold;}.brand-logo{font-size:24px;text-align:center;padding:10px;color:#45a29e;text-shadow:0 0 5px #66fcf1;}.card-panel{background:#1c1c1c;border:2px solid #45a29e;border-radius:8px;margin:10px;padding:15px;box-shadow:0 0 15px #45a29e;} .card-title{font-size:16px;font-weight:bold;color:#66fcf1;margin-bottom:5px;}.badge-success{background:#45a29e;color:#0b0c10;font-weight:bold;padding:2px 6px;border-radius:4px;}.badge-fail{background:#ff4b5c;color:#0b0c10;font-weight:bold;padding:2px 6px;border-radius:4px;}.badge-warning{background:#f5a623;color:#0b0c10;font-weight:bold;padding:2px 6px;border-radius:4px;}pre{background:#0b0c10;color:#66fcf1;padding:8px;border-radius:4px;overflow-x:auto;}summary{font-weight:bold;color:#45a29e;cursor:pointer;}.test-content:hover{box-shadow:0 0 20px #66fcf1;transform:scale(1.02);transition:all 0.3s ease-in-out;}.theme-toggle{position:fixed;top:15px;right:20px;background:#45a29e;color:#0b0c10;padding:6px 12px;border-radius:20px;cursor:pointer;z-index:999;font-weight:bold;}</style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">💳 Salispay Test Terminal</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">26-Sept-2025 02:39:14 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Create</a><a class="dropdown-item" href="#">KYCUpdate</a><a class="dropdown-item" href="#">Deleteoperations</a><a class="dropdown-item" href="#">ShopDetails</a><a class="dropdown-item" href="#">SubmitPage</a><a class="dropdown-item" href="#">ChannelUpdate</a><a class="dropdown-item" href="#">UserConfirm</a><a class="dropdown-item" href="#">OTP</a><a class="dropdown-item" href="#">Negative</a><a class="dropdown-item" href="#">Customerdetailsenquiry</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag="Create"
+          device="">
+          <div class="test-detail">
+            <p class="name">Valid Account</p>
+            <p class="text-sm">
+              <span>2:39:14 pm</span> / <span>00:00:05:538</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Valid Account</h5>
+<span class='badge badge-success'>09.26.2025 2:39:14 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:39:20 pm</span>
+<span class='badge badge-default'>00:00:05:538</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Create</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:20 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:20 pm</td>
+        <td>
+          <b>📌 GMID:</b> N/A
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:20 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 3820 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:20 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{accountNo='0361073606400014', cifNumber='7360640'}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:20 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":{"groupMerchantId":"68d6583d8200d99ebea8c9e3"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:20 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag="Create"
+          device="">
+          <div class="test-detail">
+            <p class="name">Invalid Account No</p>
+            <p class="text-sm">
+              <span>2:39:21 pm</span> / <span>00:00:01:784</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Invalid Account No</h5>
+<span class='badge badge-success'>09.26.2025 2:39:21 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:39:22 pm</span>
+<span class='badge badge-default'>00:00:01:784</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Create</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:22 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:22 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:22 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 1738 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:22 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{accountNo='000107360641002', cifNumber='7360640'}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:22 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"failed","error":"Account details not matched"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:22 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag="Negative"
+          device="">
+          <div class="test-detail">
+            <p class="name">CrossCase – Get merchant without submission of KYC details</p>
+            <p class="text-sm">
+              <span>2:39:22 pm</span> / <span>00:00:03:970</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CrossCase – Get merchant without submission of KYC details</h5>
+<span class='badge badge-success'>09.26.2025 2:39:22 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:39:26 pm</span>
+<span class='badge badge-default'>00:00:03:970</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Negative</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:26 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/group-merchants/get/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:26 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:26 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 987 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:26 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{channels=[{name='POS', selected=true}]}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:26 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"_id":"68d6583d8200d99ebea8c9e3","editedDetails":{"aggreementFlag":false,"createdAt":"2025-09-22T12:44:30.087Z","updatedAt":"2025-09-22T12:44:30.087Z","_id":"68d6583d8200d99ebea8c9e4","personalInfo":[{"dob":"1978-09-15T20:00:00.000Z","title":"Mr.","firstName":"TEST7360640","lastName":"","address":"112,RUWI,Sultanate of Oman","pincode":"649abc09d8df36b21f1b71ea","area":"al malda","city":"al batinah","mobile":"96510663","phone":"96510663","email":"alshukili.qais@gmail.com","nationality":"OM","postalCode":"314","passportNumber":"","isDelete":false,"isActive":true,"_id":"68d658438200d99ebea8ca36"}],"settlementInformation":[{"isDelete":false,"isActive":true,"bankAccountNumber":"0361073606400014","payment":"Direct Credit","accountType":"Current","branch":"THARMAD BRANCH","bankCity":"7360640","_id":"68d6583d8200d99ebea8c9e5"}],"salesInformation":{"status":"new","_id":"68d6583d8200d99ebea8c9e6","aggregator":{"_id":"6638cecd182cc2caf44dfc9c","finalDetails":{"companyInformation":{"legalName":"Bank Muscat","brandName":"Bank Muscat","id":null},"whiteLabelInfo":{"userNameAs":"custom","maxPlatformUser":"70","createMerchentUser":"Yes","_id":"6698c6458531382c4c49f538","updatedAt":"2025-09-11T11:55:19.449Z","createdAt":"2025-09-11T11:55:19.449Z"},"paymentBridge":{"isActive":true,"keys":[],"ipAddress":[],"createdAt":"2025-09-11T11:55:19.449Z","updatedAt":"2025-09-11T11:55:19.449Z","_id":"6812092d4badb2084da8b664"},"id":null},"transStatus":"activated","channelConfig":[{"_id":"67e3e5e6206c9a09c13cfa3c","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b428e501198014146d884b","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:32:54.096Z","updatedAt":"2025-03-26T11:32:54.096Z","__v":0,"id":"67e3e5e6206c9a09c13cfa3c"},{"_id":"67e3e5f1206c9a09c13cfacb","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b428ff01198014146d8884","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:05.383Z","updatedAt":"2025-03-26T11:33:05.383Z","__v":0,"id":"67e3e5f1206c9a09c13cfacb"},{"_id":"67e3e600206c9a09c13cfb5c","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b4294801198014146d88bc","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:20.173Z","updatedAt":"2025-03-26T11:33:20.173Z","__v":0,"id":"67e3e600206c9a09c13cfb5c"},{"_id":"67e3e60b206c9a09c13cfbc2","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b4297101198014146d88f5","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:31.724Z","updatedAt":"2025-03-26T11:33:31.724Z","__v":0,"id":"67e3e60b206c9a09c13cfbc2"},{"_id":"67e3e618206c9a09c13cfd94","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b4299501198014146d892f","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:44.951Z","updatedAt":"2025-03-26T11:33:44.951Z","__v":0,"id":"67e3e618206c9a09c13cfd94"}],"id":"6638cecd182cc2caf44dfc9c"},"aggAppNumber":"0000428","uniqRefNumber":"0000428","credopayAppNumber":"CP00000344","aggAppDate":"2025-09-26T09:09:17.673Z"},"whiteLabelInfo":{"_id":"68d6583d8200d99ebea8c9e7","maxPlatformUser":"5"},"companyInformation":{"legalName":"SHORT7360640","brandName":"TEST7360640","year":"Sun Jun 29 2025 00:00:00 GMT+0400 (Gulf Standard Time)","establishYear":"2025-06-28T20:00:00.000Z","_id":"68d658438200d99ebea8ca35"}},"otpVerified":false,"status":"new","transStatus":"new","type":["onboarding-create"],"isEdited":false,"cifNumber":"7360640","selfMerchant":{"accountInfo":true,"serviceInfo":true,"kyc":false,"shopInfo":false,"submitPage":false,"lastStep":false,"_id":"68d6583d8200d99ebea8c9e8","createdAt":"2025-09-26T09:09:17.678Z","updatedAt":"2025-09-26T09:09:23.116Z"},"onboardingType":"digital","statusHistory":[{"_id":"68d6583d8200d99ebea8c9e9","status":"new","createdAt":"2025-09-26T09:09:17.678Z","updatedAt":"2025-09-26T09:09:17.678Z"}],"channels":[{"name":"POS","selected":true,"_id":"68d658438200d99ebea8ca37"}],"pdfSlug":[],"createdAt":"2025-09-26T09:09:17.678Z","updatedAt":"2025-09-26T09:09:23.116Z","__v":0,"omacr":"7/36064/0","communicationInfo":[],"Merchants":[],"id":"68d6583d8200d99ebea8c9e3"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:26 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag="Negative"
+          device="">
+          <div class="test-detail">
+            <p class="name">CrossCase – ConfirmPage submission without Kyc details</p>
+            <p class="text-sm">
+              <span>2:39:26 pm</span> / <span>00:00:01:975</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CrossCase – ConfirmPage submission without Kyc details</h5>
+<span class='badge badge-success'>09.26.2025 2:39:26 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:39:28 pm</span>
+<span class='badge badge-default'>00:00:01:975</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Negative</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:28 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:28 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:28 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 1888 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:28 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{confirmPage={termsCondition=true}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:39:28 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"failed","error":"Need to add location details in kyc page"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:39:28 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag="Negative"
+          device="">
+          <div class="test-detail">
+            <p class="name">CrossCase – KYC then Shop without POS</p>
+            <p class="text-sm">
+              <span>2:39:28 pm</span> / <span>00:00:37:457</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">CrossCase – KYC then Shop without POS</h5>
+<span class='badge badge-success'>09.26.2025 2:39:28 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:06 pm</span>
+<span class='badge badge-default'>00:00:37:457</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Negative</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:06 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:06 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:06 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 3280 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:06 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{merchantId='68d6584c8200d99ebea8cb35', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='272 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=711, noOfPOSDevices=1, softPOS=0, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:06 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"failed","error":"Pos is not selected in choose service page"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:06 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag="ChannelUpdate"
+          device="">
+          <div class="test-detail">
+            <p class="name">POS Channel - valid</p>
+            <p class="text-sm">
+              <span>2:40:06 pm</span> / <span>00:00:02:079</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">POS Channel - valid</h5>
+<span class='badge badge-success'>09.26.2025 2:40:06 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:08 pm</span>
+<span class='badge badge-default'>00:00:02:079</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ChannelUpdate</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:08 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:08 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:08 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 2036 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:08 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{channels=[{name='POS', selected=true}]}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:08 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":{"groupMerchantId":"68d6583d8200d99ebea8c9e3"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:08 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag="KYCUpdate"
+          device="">
+          <div class="test-detail">
+            <p class="name">Invalid KYC</p>
+            <p class="text-sm">
+              <span>2:40:08 pm</span> / <span>00:00:00:896</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Invalid KYC</h5>
+<span class='badge badge-success'>09.26.2025 2:40:08 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:09 pm</span>
+<span class='badge badge-default'>00:00:00:896</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">KYCUpdate</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:09 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68z96aa0fad5f8bf0b71063c
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:09 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:09 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 848 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:09 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{kyc={commerceFile='1f06e92e-e159-6dc0', commerceNumber='7/36064/1', numberOfMerchantLocations=3, passportFrontFile='1f06e92e-ff3a-6c90-8098', passportNumber='A2'}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:09 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"failed","error":"Cast to ObjectId failed for value \"68z96aa0fad5f8bf0b71063c\" (type string) at path \"_id\" for model \"groupMerchants\""}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:09 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag="KYCUpdate"
+          device="">
+          <div class="test-detail">
+            <p class="name">Valid KYC</p>
+            <p class="text-sm">
+              <span>2:40:11 pm</span> / <span>00:00:01:657</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Valid KYC</h5>
+<span class='badge badge-success'>09.26.2025 2:40:11 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:13 pm</span>
+<span class='badge badge-default'>00:00:01:657</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">KYCUpdate</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:13 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:13 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:13 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 1599 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:13 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{kyc={commerceFile='1f06e92e-e159-6dc0-fca2-aed39672ae12', commerceNumber='7/36064/1', numberOfMerchantLocations=3, passportFrontFile='1f06e92e-ff3a-6c90-8098-b93b6f24752b', passportNumber='A1234567'}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:13 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":{"groupMerchantId":"68d6583d8200d99ebea8c9e3"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:13 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag="Customerdetailsenquiry"
+          device="">
+          <div class="test-detail">
+            <p class="name">Details</p>
+            <p class="text-sm">
+              <span>2:40:15 pm</span> / <span>00:00:01:292</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Details</h5>
+<span class='badge badge-success'>09.26.2025 2:40:15 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:16 pm</span>
+<span class='badge badge-default'>00:00:01:292</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Customerdetailsenquiry</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:16 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/null
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:16 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:16 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 831 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:16 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{accountNo='0361073606400014', cifNumber='7360640'}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:16 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"_id":"68d6583d8200d99ebea8c9e3","editedDetails":{"aggreementFlag":false,"createdAt":"2025-09-22T12:44:30.087Z","updatedAt":"2025-09-22T12:44:30.087Z","_id":"68d6583d8200d99ebea8c9e4","personalInfo":[{"dob":"1978-09-15T20:00:00.000Z","title":"Mr.","firstName":"TEST7360640","lastName":"","address":"112,RUWI,Sultanate of Oman","pincode":"649abc09d8df36b21f1b71ea","area":"al malda","city":"al batinah","mobile":"96510663","phone":"96510663","email":"alshukili.qais@gmail.com","nationality":"OM","postalCode":"314","passportNumber":"","isDelete":false,"isActive":true,"_id":"68d6586e8200d99ebea8cc10"}],"settlementInformation":[{"isDelete":false,"isActive":true,"bankAccountNumber":"0361073606400014","payment":"Direct Credit","accountType":"Current","branch":"THARMAD BRANCH","bankCity":"7360640","_id":"68d6583d8200d99ebea8c9e5"}],"salesInformation":{"status":"new","_id":"68d6583d8200d99ebea8c9e6","aggregator":{"_id":"6638cecd182cc2caf44dfc9c","finalDetails":{"companyInformation":{"legalName":"Bank Muscat","brandName":"Bank Muscat","id":null},"whiteLabelInfo":{"userNameAs":"custom","maxPlatformUser":"70","createMerchentUser":"Yes","_id":"6698c6458531382c4c49f538","updatedAt":"2025-09-11T11:55:19.449Z","createdAt":"2025-09-11T11:55:19.449Z"},"paymentBridge":{"isActive":true,"keys":[],"ipAddress":[],"createdAt":"2025-09-11T11:55:19.449Z","updatedAt":"2025-09-11T11:55:19.449Z","_id":"6812092d4badb2084da8b664"},"id":null},"transStatus":"activated","channelConfig":[{"_id":"67e3e5e6206c9a09c13cfa3c","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b428e501198014146d884b","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:32:54.096Z","updatedAt":"2025-03-26T11:32:54.096Z","__v":0,"id":"67e3e5e6206c9a09c13cfa3c"},{"_id":"67e3e5f1206c9a09c13cfacb","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b428ff01198014146d8884","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:05.383Z","updatedAt":"2025-03-26T11:33:05.383Z","__v":0,"id":"67e3e5f1206c9a09c13cfacb"},{"_id":"67e3e600206c9a09c13cfb5c","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b4294801198014146d88bc","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:20.173Z","updatedAt":"2025-03-26T11:33:20.173Z","__v":0,"id":"67e3e600206c9a09c13cfb5c"},{"_id":"67e3e60b206c9a09c13cfbc2","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b4297101198014146d88f5","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:31.724Z","updatedAt":"2025-03-26T11:33:31.724Z","__v":0,"id":"67e3e60b206c9a09c13cfbc2"},{"_id":"67e3e618206c9a09c13cfd94","bankName":{"_id":"6638c6a2182cc2caf44df414","finalDetails":{"generalInfo":{"bankName":"Bank Muscat","id":null}},"id":"6638c6a2182cc2caf44df414"},"channelGroupId":"67b4299501198014146d892f","network":"","transaction":[],"isActive":true,"isDelete":false,"aggregatorId":"6638cecd182cc2caf44dfc9c","createdBy":"abi-superadmin","createdAt":"2025-03-26T11:33:44.951Z","updatedAt":"2025-03-26T11:33:44.951Z","__v":0,"id":"67e3e618206c9a09c13cfd94"}],"id":"6638cecd182cc2caf44dfc9c"},"aggAppNumber":"0000428","uniqRefNumber":"0000428","credopayAppNumber":"CP00000344","aggAppDate":"2025-09-26T09:09:17.673Z"},"whiteLabelInfo":{"_id":"68d6583d8200d99ebea8c9e7","maxPlatformUser":"5"},"companyInformation":{"legalName":"SHORT7360640","brandName":"TEST7360640","year":"Sun Jun 29 2025 00:00:00 GMT+0400 (Gulf Standard Time)","establishYear":"2025-06-28T20:00:00.000Z","_id":"68d6586e8200d99ebea8cc0f","registeredNumber":"7/36064/1"}},"otpVerified":false,"status":"new","transStatus":"new","type":["onboarding-create"],"isEdited":false,"cifNumber":"7360640","selfMerchant":{"accountInfo":true,"serviceInfo":true,"kyc":true,"shopInfo":false,"submitPage":false,"lastStep":false,"_id":"68d6583d8200d99ebea8c9e8","createdAt":"2025-09-26T09:09:17.678Z","updatedAt":"2025-09-26T09:10:11.412Z"},"onboardingType":"digital","statusHistory":[{"_id":"68d6583d8200d99ebea8c9e9","status":"new","createdAt":"2025-09-26T09:09:17.678Z","updatedAt":"2025-09-26T09:09:17.678Z"}],"channels":[{"name":"POS","selected":true,"_id":"68d6586e8200d99ebea8cc11"}],"pdfSlug":[],"createdAt":"2025-09-26T09:09:17.678Z","updatedAt":"2025-09-26T09:10:11.412Z","__v":0,"omacr":"7/36064/0","kyc":{"numberOfMerchantLocations":3,"commerceNumber":"7/36064/1","passportNumber":"A1234567","commerceFile":"1f06e92e-e159-6dc0-fca2-aed39672ae12","passportFrontFile":"1f06e92e-ff3a-6c90-8098-b93b6f24752b","_id":"68d658738200d99ebea8cc76","updatedAt":"2025-09-26T09:10:11.412Z","createdAt":"2025-09-26T09:10:11.412Z"},"communicationInfo":[],"Merchants":[{"_id":"68d6584c8200d99ebea8cb35","editedDetails":{"binBlocks":{"binBlocks":[],"binList":[{"value":true,"name":"credit","_id":"68d6584c8200d99ebea8cb37"},{"value":true,"name":"debit","_id":"68d6584c8200d99ebea8cb38"}],"_id":"68d6584c8200d99ebea8cb36","createdAt":"2025-09-26T09:09:32.947Z","updatedAt":"2025-09-26T09:09:32.947Z"},"frmCheck":true,"aggreementFlag":false,"createdAt":"2025-09-22T12:44:30.201Z","updatedAt":"2025-09-22T12:44:30.201Z","_id":"68d6584c8200d99ebea8cb39","settlementInformation":[],"documents":[],"personalInfo":[],"sms":[],"mail":[],"salesInformation":{"aggregator":"6638cecd182cc2caf44dfc9c","aggCode":"","credopayAppNumber":"CF00002612","agreementDate":"2025-09-26T09:09:32.565Z","credopayAppDate":"2025-09-26T09:09:32.565Z","aggAppNumber":"","aggAppDate":"2025-09-26T09:09:32.565Z","groupMerchant":"68d6583d8200d99ebea8c9e3","salesPerson":""},"companyInformation":{"locationType":"dynamic","_id":"68d6584c8200d99ebea8cb3a","merchantType":"pos+lulu+me+pbl+epp","merchantTypeId":"6580202a9e4a68432f3ba8c3"}},"status":"new","transStatus":"new","type":["onboarding-create"],"onboardingType":"digital","isEdited":false,"terminalNumbers":[],"statusHistory":[{"_id":"68d6584c8200d99ebea8cb3b","status":"new","createdAt":"2025-09-26T09:09:32.947Z","updatedAt":"2025-09-26T09:09:32.947Z"}],"banks":[],"createdAt":"2025-09-26T09:09:32.948Z","updatedAt":"2025-09-26T09:09:32.948Z","__v":0,"terminalInfo":[],"communicationInfo":[],"id":"68d6584c8200d99ebea8cb35"},{"_id":"68d6584c8200d99ebea8cb3d","editedDetails":{"binBlocks":{"binBlocks":[],"binList":[{"value":true,"name":"credit","_id":"68d6584c8200d99ebea8cb3f"},{"value":true,"name":"debit","_id":"68d6584c8200d99ebea8cb40"}],"_id":"68d6584c8200d99ebea8cb3e","createdAt":"2025-09-26T09:09:32.977Z","updatedAt":"2025-09-26T09:09:32.977Z"},"frmCheck":true,"aggreementFlag":false,"createdAt":"2025-09-22T12:44:30.201Z","updatedAt":"2025-09-22T12:44:30.201Z","_id":"68d6584c8200d99ebea8cb41","settlementInformation":[],"documents":[],"personalInfo":[],"sms":[],"mail":[],"salesInformation":{"aggregator":"6638cecd182cc2caf44dfc9c","aggCode":"","credopayAppNumber":"CF00002611","agreementDate":"2025-09-26T09:09:32.564Z","credopayAppDate":"2025-09-26T09:09:32.564Z","aggAppNumber":"","aggAppDate":"2025-09-26T09:09:32.564Z","groupMerchant":"68d6583d8200d99ebea8c9e3","salesPerson":""},"companyInformation":{"locationType":"dynamic","_id":"68d6584c8200d99ebea8cb42","merchantType":"pos+lulu+me+pbl+epp","merchantTypeId":"6580202a9e4a68432f3ba8c3"}},"status":"new","transStatus":"new","type":["onboarding-create"],"onboardingType":"digital","isEdited":false,"terminalNumbers":[],"statusHistory":[{"_id":"68d6584c8200d99ebea8cb43","status":"new","createdAt":"2025-09-26T09:09:32.977Z","updatedAt":"2025-09-26T09:09:32.977Z"}],"banks":[],"createdAt":"2025-09-26T09:09:32.977Z","updatedAt":"2025-09-26T09:09:32.977Z","__v":0,"terminalInfo":[],"communicationInfo":[],"id":"68d6584c8200d99ebea8cb3d"},{"_id":"68d6584d8200d99ebea8cb45","editedDetails":{"binBlocks":{"binBlocks":[],"binList":[{"value":true,"name":"credit","_id":"68d6584d8200d99ebea8cb47"},{"value":true,"name":"debit","_id":"68d6584d8200d99ebea8cb48"}],"_id":"68d6584d8200d99ebea8cb46","createdAt":"2025-09-26T09:09:33.080Z","updatedAt":"2025-09-26T09:09:33.080Z"},"frmCheck":true,"aggreementFlag":false,"createdAt":"2025-09-22T12:44:30.201Z","updatedAt":"2025-09-22T12:44:30.201Z","_id":"68d6584d8200d99ebea8cb49","settlementInformation":[],"documents":[],"personalInfo":[],"sms":[],"mail":[],"salesInformation":{"aggregator":"6638cecd182cc2caf44dfc9c","aggCode":"","credopayAppNumber":"CF00002613","agreementDate":"2025-09-26T09:09:32.566Z","credopayAppDate":"2025-09-26T09:09:32.566Z","aggAppNumber":"","aggAppDate":"2025-09-26T09:09:32.566Z","groupMerchant":"68d6583d8200d99ebea8c9e3","salesPerson":""},"companyInformation":{"locationType":"dynamic","_id":"68d6584d8200d99ebea8cb4a","merchantType":"pos+lulu+me+pbl+epp","merchantTypeId":"6580202a9e4a68432f3ba8c3"}},"status":"new","transStatus":"new","type":["onboarding-create"],"onboardingType":"digital","isEdited":false,"terminalNumbers":[],"statusHistory":[{"_id":"68d6584d8200d99ebea8cb4b","status":"new","createdAt":"2025-09-26T09:09:33.080Z","updatedAt":"2025-09-26T09:09:33.080Z"}],"banks":[],"createdAt":"2025-09-26T09:09:33.080Z","updatedAt":"2025-09-26T09:09:33.080Z","__v":0,"terminalInfo":[],"communicationInfo":[],"id":"68d6584d8200d99ebea8cb45"}],"id":"68d6583d8200d99ebea8c9e3"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:16 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag="Deleteoperations"
+          device="">
+          <div class="test-detail">
+            <p class="name">shop deletion before or /After location </p>
+            <p class="text-sm">
+              <span>2:40:25 pm</span> / <span>00:00:03:381</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">shop deletion before or /After location </h5>
+<span class='badge badge-success'>09.26.2025 2:40:25 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:28 pm</span>
+<span class='badge badge-default'>00:00:03:381</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Deleteoperations</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:28 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:28 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:28 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 3030 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:28 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{shopDetails={isDelete=true}, merchantId='68d6584c8200d99ebea8cb3d'}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:28 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":"Merchant location deleted successfully"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:28 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author=""
+          tag="Deleteoperations"
+          device="">
+          <div class="test-detail">
+            <p class="name">shop deletion before or /After location </p>
+            <p class="text-sm">
+              <span>2:40:28 pm</span> / <span>00:00:02:448</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">shop deletion before or /After location </h5>
+<span class='badge badge-success'>09.26.2025 2:40:28 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:30 pm</span>
+<span class='badge badge-default'>00:00:02:448</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Deleteoperations</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:30 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:30 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:30 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 2091 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:30 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{shopDetails={isDelete=true}, merchantId='68d6584d8200d99ebea8cb45'}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:30 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":"Merchant location deleted successfully"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:30 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author=""
+          tag="Deleteoperations"
+          device="">
+          <div class="test-detail">
+            <p class="name">Merchant application status check post removal </p>
+            <p class="text-sm">
+              <span>2:40:31 pm</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Merchant application status check post removal </h5>
+<span class='badge badge-success'>09.26.2025 2:40:31 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:31 pm</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Deleteoperations</span></div>
+</div>
+</div>          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author=""
+          tag="ShopDetails"
+          device="">
+          <div class="test-detail">
+            <p class="name">Shop Details Test for Merchant</p>
+            <p class="text-sm">
+              <span>2:40:43 pm</span> / <span>00:00:05:900</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Shop Details Test for Merchant</h5>
+<span class='badge badge-success'>09.26.2025 2:40:43 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:49 pm</span>
+<span class='badge badge-default'>00:00:05:900</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">ShopDetails</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:49 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:49 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:49 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 4184 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:49 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{merchantId='68d6584c8200d99ebea8cb35', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='272 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=711, noOfPOSDevices=1, softPOS=0, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:49 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":"Merchant updated successfully"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:49 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author=""
+          tag="UserConfirm"
+          device="">
+          <div class="test-detail">
+            <p class="name">Confirm Page TC - enabled</p>
+            <p class="text-sm">
+              <span>2:40:49 pm</span> / <span>00:00:02:543</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Confirm Page TC - enabled</h5>
+<span class='badge badge-success'>09.26.2025 2:40:49 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:51 pm</span>
+<span class='badge badge-default'>00:00:02:543</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">UserConfirm</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:51 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:51 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:51 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 2501 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:51 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{confirmPage={termsCondition=true}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:51 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":{"otpSentSuccess":false,"otpExpiryMinutes":"3"}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:51 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author=""
+          tag="UserConfirm"
+          device="">
+          <div class="test-detail">
+            <p class="name">Confirm Page TC - disabled</p>
+            <p class="text-sm">
+              <span>2:40:51 pm</span> / <span>00:00:01:683</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Confirm Page TC - disabled</h5>
+<span class='badge badge-success'>09.26.2025 2:40:51 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:53 pm</span>
+<span class='badge badge-default'>00:00:01:683</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">UserConfirm</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:53 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:53 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:53 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 1644 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:53 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{confirmPage={termsCondition=false}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:53 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"failed","error":"Please accept the terms and conditions"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:53 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="16"
+          author=""
+          tag="OTP"
+          device="">
+          <div class="test-detail">
+            <p class="name">Invalid OTP Test</p>
+            <p class="text-sm">
+              <span>2:40:53 pm</span> / <span>00:00:01:702</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Invalid OTP Test</h5>
+<span class='badge badge-success'>09.26.2025 2:40:53 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:55 pm</span>
+<span class='badge badge-default'>00:00:01:702</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">OTP</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:55 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:55 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:55 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 1675 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:55 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{otp='0000', otpFrom='Salispay'}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:55 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":{"attemptsLeft":2}}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:40:55 pm</td>
+        <td>
+          <span style='color:red;font-weight:bold;'>❌ Test Failed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="17"
+          author=""
+          tag="OTP"
+          device="">
+          <div class="test-detail">
+            <p class="name">Valid OTP Test</p>
+            <p class="text-sm">
+              <span>2:40:55 pm</span> / <span>00:00:02:857</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Valid OTP Test</h5>
+<span class='badge badge-success'>09.26.2025 2:40:55 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:58 pm</span>
+<span class='badge badge-default'>00:00:02:857</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">OTP</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:58 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:58 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:58 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 2823 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:58 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{otp='1211', otpFrom='Salispay'}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:58 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":"OTP verified successfully"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:58 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="18"
+          author=""
+          tag="SubmitPage"
+          device="">
+          <div class="test-detail">
+            <p class="name">Submit Page Disabled Test</p>
+            <p class="text-sm">
+              <span>2:40:58 pm</span> / <span>00:00:00:900</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Submit Page Disabled Test</h5>
+<span class='badge badge-success'>09.26.2025 2:40:58 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:40:59 pm</span>
+<span class='badge badge-default'>00:00:00:900</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SubmitPage</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:59 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:59 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:59 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 861 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:59 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{submitPage=false}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:40:59 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"failed","error":"After OTP verification we can't update"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:40:59 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="19"
+          author=""
+          tag="SubmitPage"
+          device="">
+          <div class="test-detail">
+            <p class="name">Submit Page Enabled Test</p>
+            <p class="text-sm">
+              <span>2:40:59 pm</span> / <span>00:00:02:136</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Submit Page Enabled Test</h5>
+<span class='badge badge-success'>09.26.2025 2:40:59 pm</span>
+<span class='badge badge-danger'>09.26.2025 2:41:01 pm</span>
+<span class='badge badge-default'>00:00:02:136</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SubmitPage</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:41:01 pm</td>
+        <td>
+          <b>🔹 Endpoint:</b> /mms/v1/digital/68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:41:01 pm</td>
+        <td>
+          <b>📌 GMID:</b> 68d6583d8200d99ebea8c9e3
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:41:01 pm</td>
+        <td>
+          <b>⏱ Response Time:</b> 2106 ms
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:41:01 pm</td>
+        <td>
+          <b>📂 Payload:</b><pre style='color:purple;'>{submitPage=true}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>2:41:01 pm</td>
+        <td>
+          <b>📥 Response:</b><pre style='color:green;'>{"status":"success","data":"Application submitted successfully"}</pre>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>2:41:01 pm</td>
+        <td>
+          <span style='color:green;font-weight:bold;'>✅ Test Passed</span>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">10</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">Create</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Create</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:39:14 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Valid Account</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:39:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Invalid Account No</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">KYCUpdate</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>KYCUpdate</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>Invalid KYC</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:11 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>Valid KYC</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">Deleteoperations</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Deleteoperations</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:25 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>shop deletion before or /After location </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:28 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>shop deletion before or /After location </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:31 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Merchant application status check post removal </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">ShopDetails</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>ShopDetails</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>Shop Details Test for Merchant</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">SubmitPage</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>SubmitPage</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:58 pm</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>Submit Page Disabled Test</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:59 pm</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>Submit Page Enabled Test</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">ChannelUpdate</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>ChannelUpdate</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>POS Channel - valid</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">UserConfirm</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>UserConfirm</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:49 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Confirm Page TC - enabled</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:51 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Confirm Page TC - disabled</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">OTP</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>OTP</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>14:40:53 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Invalid OTP Test</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:55 pm</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>Valid OTP Test</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">Negative</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Negative</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:39:22 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>CrossCase – Get merchant without submission of KYC details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:39:26 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>CrossCase – ConfirmPage submission without Kyc details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:39:28 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>CrossCase – KYC then Shop without POS</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">Customerdetailsenquiry</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Customerdetailsenquiry</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>14:40:15 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Details</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>26-Sept-2025 02:39:14 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>26-Sept-2025 02:41:01 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>18</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='94%'>
+<b>18</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='5%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='15%'><b>17</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>1</b> events failed,
+<b data-tooltip='%'>90</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Valid Account":5.538,"Invalid Account No":1.784,"CrossCase – Get merchant without submission of KYC details":3.97,"CrossCase – ConfirmPage submission without Kyc details":1.975,"CrossCase – KYC then Shop without POS":37.457,"POS Channel - valid":2.079,"Invalid KYC":0.896,"Valid KYC":1.657,"Details":1.292,"shop deletion before or /After location ":3.381,"shop deletion before or /After location ":2.448,"Merchant application status check post removal ":0,"Shop Details Test for Merchant":5.9,"Confirm Page TC - enabled":2.543,"Confirm Page TC - disabled":1.683,"Invalid OTP Test":1.702,"Valid OTP Test":2.857,"Submit Page Disabled Test":0.9,"Submit Page Enabled Test":2.136
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>Create</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>KYCUpdate</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Deleteoperations</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>ShopDetails</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>SubmitPage</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>ChannelUpdate</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>UserConfirm</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>OTP</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Negative</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Customerdetailsenquiry</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>Salispay POS</td>
+</tr>
+<tr>
+<td>Bank</td>
+<td>BankMuscat</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>UAT</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>Java + TestNG + RestAssured</td>
+</tr>
+<tr>
+<td>Generated On</td>
+<td>2025-09-26T14:39:14.858846100</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 18,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 17,
+failEvents: 1,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 90
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript">const btn=document.createElement('div');btn.className='theme-toggle';btn.innerText='Toggle Theme';document.body.appendChild(btn);let dark=true;btn.onclick=()=>{document.body.style.background=dark?'#c5c6c7':'#0b0c10';document.body.style.color=dark?'#0b0c10':'#c5c6c7';dark=!dark;};</script></body>
+</html>
