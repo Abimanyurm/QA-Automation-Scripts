@@ -15,8 +15,8 @@ public class BaseApi {
 
 	public BaseApi() {
 		request = new RequestSpecBuilder().setBaseUri(baseUrl).setContentType("application/json")
-				.addHeader("Authorization", "Bearer " + authToken).log(LogDetail.ALL).build();
-		// .
+				.addHeader("Authorization", "Bearer " + authToken).build();
+		// .log(LogDetail.ALL)
 
 		RestAssured.requestSpecification = request;
 	}
