@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk 'Java17' // The name of your JDK installation in Jenkins
+        maven 'Maven3' // The name of your Maven installation in Jenkins
+    }
+
+    environment {
+        REPORT_DIR = 'target/surefire-reports'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Abimanyurm/QA-Automation-Scripts.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Publish Report') {
+            steps {
+                junit "${env.REPORT_DIR}/*.xml"
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
+        }
+    }
+}
