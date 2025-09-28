@@ -388,7 +388,7 @@ public class useAccount extends BaseApi {
 		Assert.assertEquals(response.getStatusCode(), 200, "Status mismatch for test case: " + testCase);
 	}
 	
-	 /** STEP 1️⃣: Delete merchant(s) and store deleted MIDs */
+	 /** STEP 1️: Delete merchant(s) and store deleted MIDs */
     @Test(dataProvider = "deleteShopData",dataProviderClass = TestDataProvider.class, priority = 8)
     public void deleteMerchants(DeleteShopPayload deletePayload) throws InterruptedException {
     	
@@ -472,8 +472,7 @@ public class useAccount extends BaseApi {
             logTestResult("Merchant application status check post removal", updateEndpoint + groupMerchantId, payload, resp,isPassed);
 
             Assert.assertEquals(false, null);
-            // Optionally write to Excel or report
-            //ExcelReport.writeDeletedMerchant(mid, status, latestDesc);
+
             }}
     }
 
@@ -519,12 +518,12 @@ public class useAccount extends BaseApi {
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "success", "Shop details creation failed");
 	}
-//	  /** STEP 4️⃣: Optional final validation (reuse deleted list) */
-//    @Test(dependsOnMethods = "shopDetailsData", priority = 4)
-//    public void revalidateAfterUpdate() {
-//        // Simply reuse the same validation logic
-//        validateDeletedMerchants();
-//    }
+   // Optional final validation (reuse deleted list) */
+      @Test(dependsOnMethods = "shopDetailsData", priority = 4)
+      public void revalidateAfterUpdate() {
+      Simply reuse the same validation logic
+      validateDeletedMerchants();
+      }
 	
 	// ----------------------- CONFIRM PAGE -----------------------
 	@Test(dataProvider = "confirmPageData", dataProviderClass = TestDataProvider.class, priority = 11)
@@ -594,38 +593,4 @@ public class useAccount extends BaseApi {
 	}
 }
 
-// ----------------------- CROSS CASE : KYC + Shop Location -------------
 
-// @Test(priority = 5) // run after account
-// public void crossCase_ConfirmationWithoutChannel() {
-//
-// // 🔹 Start Extent test
-// String testCase = "CrossCase – ConfirmPage submission without POS Selection";
-// test = extent.createTest(testCase).assignCategory("Negative");
-//
-// // 🔹 Prepare Request Payload
-// boolean termsCondition =
-// Boolean.parseBoolean(configManager.getProperty("confirmPage.key3"));
-// ConfirmPagePayload.ConfirmPage confirmPage = new
-// ConfirmPagePayload.ConfirmPage(termsCondition);
-// ConfirmPagePayload requestPayload = new ConfirmPagePayload(confirmPage);
-//
-// // 🔹 Execute API Request
-// String gmId = groupMerchantId;
-// String endpoint = updateEndpoint + gmId;
-// Response response = RestAssured.given().body(requestPayload).put(endpoint);
-//
-// // 🔹 Expected & Actual
-// String expectedStatus = "failed"; // since POS is not selected
-// String actualStatus = response.jsonPath().getString("status");
-// String actualError = response.jsonPath().getString("error");
-//
-// // 🔹 Log & Assert
-// logTestResult(testCase, endpoint, requestPayload, response,
-// expectedStatus.equals(actualStatus));
-// Assert.assertEquals(actualStatus, expectedStatus, "Status mismatch for test
-// case: " + testCase);
-// Assert.assertEquals(actualError, "Need to fill all location details", "Error
-// message mismatch");
-//
-// }
