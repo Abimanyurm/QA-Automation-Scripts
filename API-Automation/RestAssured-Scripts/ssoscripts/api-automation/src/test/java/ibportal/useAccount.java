@@ -518,12 +518,12 @@ public class useAccount extends BaseApi {
 
 		Assert.assertEquals(response.jsonPath().getString("status"), "success", "Shop details creation failed");
 	}
-   // Optional final validation (reuse deleted list) */
-      @Test(dependsOnMethods = "shopDetailsData", priority = 4)
-      public void revalidateAfterUpdate() {
-      Simply reuse the same validation logic
-      validateDeletedMerchants();
-      }
+   // // Optional final validation (reuse deleted list) */
+   //    @Test(dependsOnMethods = "shopDetailsData", priority = 4)
+   //    public void revalidateAfterUpdate() {
+   //    Simply reuse the same validation logic
+   //    validateDeletedMerchants();
+   //    }
 	
 	// ----------------------- CONFIRM PAGE -----------------------
 	@Test(dataProvider = "confirmPageData", dataProviderClass = TestDataProvider.class, priority = 11)
