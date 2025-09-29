@@ -17,24 +17,28 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-               bat 'mvn clean compile'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat 'mvn test'
-            }
-        }
-
-        stage('Publish Report') {
-            steps {
-                junit "${env.REPORT_DIR}/*.xml"
-            }
+stage('Build') {
+    steps {
+        dir('API-Automation') {   // Change to the folder containing pom.xml
+            bat 'mvn clean compile'
         }
     }
+}
+stage('Test') {
+    steps {
+        dir('API-Automation') {   // Same here
+            bat 'mvn test'
+        }
+    }
+}
+
+stage('Publish Report') {
+    steps {
+        dir('API-Automation') {   // Reports are generated here
+            junit "${env.REPORT_DIR}/*.xml"
+        }
+    }
+}
 
     post {
         always {
