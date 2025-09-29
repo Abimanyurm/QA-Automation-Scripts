@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        jdk 'Java17' // Your configured JDK in Jenkins
-        maven 'Maven3' // Your configured Maven in Jenkins
+        jdk 'Java17'        // Make sure JDK17 is configured in Jenkins
+        maven 'Maven3'      // Make sure Maven3 is configured in Jenkins
     }
 
     environment {
@@ -17,17 +17,11 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Build & Test') {
             steps {
-                dir('API-Automation') { // Go into the folder where pom.xml exists
+                // Navigate to the folder containing pom.xml
+                dir('API-Automation/RestAssured-Scripts/ssoscripts/api-automation') {
                     bat 'mvn clean compile'
-                }
-            }
-        }
-
-        stage('Test') {
-            steps {
-                dir('API-Automation') {
                     bat 'mvn test'
                 }
             }
@@ -35,7 +29,7 @@ pipeline {
 
         stage('Publish Report') {
             steps {
-                dir('API-Automation') {
+                dir('API-Automation/RestAssured-Scripts/ssoscripts/api-automation') {
                     junit "${env.REPORT_DIR}/*.xml"
                 }
             }
@@ -44,15 +38,7 @@ pipeline {
 
     post {
         always {
-            dir('API-Automation') {
-                archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
-            }
-        }
-        success {
-            echo '✅ Build and Tests succeeded!'
-        }
-        failure {
-            echo '❌ Build or Tests failed!'
+            archiveArtifacts artifacts: 'API-Automation/RestAssured-Scripts/ssoscripts/api-automation/target/*.jar', allowEmptyArchive: true
         }
     }
 }
