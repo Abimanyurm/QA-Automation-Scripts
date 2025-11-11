@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 8 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\abimanyu.r\AppData\Local\Temp\testng-eclipse-1518623571\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">33 methods, 8 failed,   25 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="createOrUpdateShopDetails({merchantId=&#039;6911e88a86c6910b389dbc5d&#039;, shopDetails={location=&#039;H7HV+W4X, Muscat 111, Oman&#039;, address=...)">createOrUpdateShopDetails({merchantId='6911e88a86c6910b389dbc5d', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="createOrUpdateShopDetails({merchantId=&#039;6911e88a86c6910b389dbc55&#039;, shopDetails={location=&#039;H7HV+W4X, Muscat 111, Oman&#039;, address=...)">createOrUpdateShopDetails({merchantId='6911e88a86c6910b389dbc55', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateConfirmPage(true, Confirm Page TC - enabled, success)">updateConfirmPage(true, Confirm Page TC - enabled, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="validateDeletedMerchants">validateDeletedMerchants</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="verifyOtpPage(1211, Salispay, Valid OTP Test, success)">verifyOtpPage(1211, Salispay, Valid OTP Test, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="verifySubmitPage(true, Submit Page Enabled Test, success)">verifySubmitPage(true, Submit Page Enabled Test, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="verifySubmitPage(false, Submit Page Disabled Test, failed)">verifySubmitPage(false, Submit Page Disabled Test, failed)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="createOrUpdateAccount(000107360641002, 7360640, null, failed, Invalid Account No, false)">createOrUpdateAccount(000107360641002, 7360640, null, failed, Invalid Account No, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="createOrUpdateAccount(0361073606400014, 7360640, null, success, Valid Account, false)">createOrUpdateAccount(0361073606400014, 7360640, null, success, Valid Account, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="createOrUpdateShopDetails({merchantId=&#039;6911e87986c6910b389dbb60&#039;, shopDetails={location=&#039;H7HV+W4X, Muscat 111, Oman&#039;, address=...)">createOrUpdateShopDetails({merchantId='6911e87986c6910b389dbb60', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="crossCase_KycThenShopWithoutChannel(6911e82686c6910b389db7e3, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)">crossCase_KycThenShopWithoutChannel(6911e82686c6910b389db7e3, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="crossCase_getComfirmationSubmissionWithoutKyc">crossCase_getComfirmationSubmissionWithoutKyc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="crossCase_getMerchantWithoutKyc(POS+softPOS, true, POS Channel - valid, success)">crossCase_getMerchantWithoutKyc(POS+softPOS, true, POS Channel - valid, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="crossCase_getMerchantWithoutKyc(softPOS, true, SOFTPOS Channel - valid, success)">crossCase_getMerchantWithoutKyc(softPOS, true, SOFTPOS Channel - valid, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="crossCase_getMerchantWithoutKyc(POS, true, POS Channel - valid, success)">crossCase_getMerchantWithoutKyc(POS, true, POS Channel - valid, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="deleteMerchants({shopDetails={isDelete=true}, merchantId=&#039;6911e87986c6910b389dbb68&#039;})">deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb68'})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="deleteMerchants({shopDetails={isDelete=true}, merchantId=&#039;6911e88a86c6910b389dbc65&#039;})">deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e88a86c6910b389dbc65'})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="deleteMerchants({shopDetails={isDelete=true}, merchantId=&#039;6911e87986c6910b389dbb70&#039;})">deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb70'})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="fetchDetails(0361073606400014, 7360640, null, 200, Details, false)">fetchDetails(0361073606400014, 7360640, null, 200, Details, false)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateChannels(POS, true, POS Channel - valid, success)">updateChannels(POS, true, POS Channel - valid, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateChannels(POS+softPOS, true, POS Channel - valid, success)">updateChannels(POS+softPOS, true, POS Channel - valid, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateChannels(softPOS, true, SOFTPOS Channel - valid, success)">updateChannels(softPOS, true, SOFTPOS Channel - valid, success)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateConfirmPage(false, Confirm Page TC - disabled, failed)">updateConfirmPage(false, Confirm Page TC - disabled, failed)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-...)">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)">updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)">updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 41, 0, 1f06e92e-ff3a-6c90...)">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 41, 0, 1f06e92e-ff3a-6c90...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 41, 1f06e92e-ff3a-6c90...)">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 41, 1f06e92e-ff3a-6c90...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="ibportal.useAccount" class="method navigator-link" hash-for-method="verifyOtpPage(0000, Salispay, Invalid OTP Test, failed)">verifyOtpPage(0000, Salispay, Invalid OTP Test, failed)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">ibportal.useAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOrUpdateShopDetails({merchantId=&#039;6911e88a86c6910b389dbc5d&#039;, shopDetails={location=&#039;H7HV+W4X, Muscat 111, Oman&#039;, address=...)">
+                  </a> <!-- createOrUpdateShopDetails({merchantId='6911e88a86c6910b389dbc5d', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...) -->
+                  <span class="method-name">createOrUpdateShopDetails</span>
+                  <span class="parameters">({merchantId='6911e88a86c6910b389dbc5d', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='273 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=813, noOfPOSDevices=0, softPOS=1, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}})</span>
+                  <div class="stack-trace">java.lang.AssertionError: Shop details creation failed expected [success] but found [failed]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at ibportal.useAccount.createOrUpdateShopDetails(useAccount.java:630)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOrUpdateShopDetails({merchantId=&#039;6911e88a86c6910b389dbc55&#039;, shopDetails={location=&#039;H7HV+W4X, Muscat 111, Oman&#039;, address=...)">
+                  </a> <!-- createOrUpdateShopDetails({merchantId='6911e88a86c6910b389dbc55', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...) -->
+                  <span class="method-name">createOrUpdateShopDetails</span>
+                  <span class="parameters">({merchantId='6911e88a86c6910b389dbc55', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='273 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=813, noOfPOSDevices=0, softPOS=1, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}})</span>
+                  <div class="stack-trace">java.lang.AssertionError: Shop details creation failed expected [success] but found [failed]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at ibportal.useAccount.createOrUpdateShopDetails(useAccount.java:630)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateConfirmPage(true, Confirm Page TC - enabled, success)">
+                  </a> <!-- updateConfirmPage(true, Confirm Page TC - enabled, success) -->
+                  <span class="method-name">updateConfirmPage</span>
+                  <span class="parameters">(true,Confirm Page TC - enabled,success)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Status mismatch for test case: Confirm Page TC - enabled expected [success] but found [failed]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at ibportal.useAccount.updateConfirmPage(useAccount.java:656)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)">
+                  </a> <!-- updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(6911e85d86c6910b389db9f6,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,0,0,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,failed,Min location - POS,true,POS)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Case: Min location - POS | Expected: failed | Actual: success expected [failed] but found [success]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at ibportal.useAccount.updateKyc(useAccount.java:433)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateDeletedMerchants">
+                  </a> <!-- validateDeletedMerchants -->
+                  <span class="method-name">validateDeletedMerchants</span>
+                  <div class="stack-trace">java.lang.AssertionError: ❌ No nested Merchants found for MID: 6911e87986c6910b389dbb68
+	at ibportal.useAccount.validateDeletedMerchants(useAccount.java:549)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOtpPage(1211, Salispay, Valid OTP Test, success)">
+                  </a> <!-- verifyOtpPage(1211, Salispay, Valid OTP Test, success) -->
+                  <span class="method-name">verifyOtpPage</span>
+                  <span class="parameters">(1211,Salispay,Valid OTP Test,success)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Status mismatch for test case: Valid OTP Test expected [success] but found [failed]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at ibportal.useAccount.verifyOtpPage(useAccount.java:675)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySubmitPage(true, Submit Page Enabled Test, success)">
+                  </a> <!-- verifySubmitPage(true, Submit Page Enabled Test, success) -->
+                  <span class="method-name">verifySubmitPage</span>
+                  <span class="parameters">(true,Submit Page Enabled Test,success)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Status mismatch for test case: Submit Page Enabled Test expected [success] but found [failed]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at ibportal.useAccount.verifySubmitPage(useAccount.java:695)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySubmitPage(false, Submit Page Disabled Test, failed)">
+                  </a> <!-- verifySubmitPage(false, Submit Page Disabled Test, failed) -->
+                  <span class="method-name">verifySubmitPage</span>
+                  <span class="parameters">(false,Submit Page Disabled Test,failed)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Status mismatch for test case: Submit Page Disabled Test expected [failed] but found [success]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at ibportal.useAccount.verifySubmitPage(useAccount.java:695)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">ibportal.useAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOrUpdateAccount(000107360641002, 7360640, null, failed, Invalid Account No, false)">
+                  </a> <!-- createOrUpdateAccount(000107360641002, 7360640, null, failed, Invalid Account No, false) -->
+                  <span class="method-name">createOrUpdateAccount</span>
+                  <span class="parameters">(000107360641002,7360640,null,failed,Invalid Account No,false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOrUpdateAccount(0361073606400014, 7360640, null, success, Valid Account, false)">
+                  </a> <!-- createOrUpdateAccount(0361073606400014, 7360640, null, success, Valid Account, false) -->
+                  <span class="method-name">createOrUpdateAccount</span>
+                  <span class="parameters">(0361073606400014,7360640,null,success,Valid Account,false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createOrUpdateShopDetails({merchantId=&#039;6911e87986c6910b389dbb60&#039;, shopDetails={location=&#039;H7HV+W4X, Muscat 111, Oman&#039;, address=...)">
+                  </a> <!-- createOrUpdateShopDetails({merchantId='6911e87986c6910b389dbb60', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...) -->
+                  <span class="method-name">createOrUpdateShopDetails</span>
+                  <span class="parameters">({merchantId='6911e87986c6910b389dbb60', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='272 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=711, noOfPOSDevices=1, softPOS=0, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="crossCase_KycThenShopWithoutChannel(6911e82686c6910b389db7e3, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)">
+                  </a> <!-- crossCase_KycThenShopWithoutChannel(6911e82686c6910b389db7e3, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...) -->
+                  <span class="method-name">crossCase_KycThenShopWithoutChannel</span>
+                  <span class="parameters">(6911e82686c6910b389db7e3,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,3,0,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,success,Valid KYC - POS,true,POS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="crossCase_getComfirmationSubmissionWithoutKyc">
+                  </a> <!-- crossCase_getComfirmationSubmissionWithoutKyc -->
+                  <span class="method-name">crossCase_getComfirmationSubmissionWithoutKyc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="crossCase_getMerchantWithoutKyc(POS+softPOS, true, POS Channel - valid, success)">
+                  </a> <!-- crossCase_getMerchantWithoutKyc(POS+softPOS, true, POS Channel - valid, success) -->
+                  <span class="method-name">crossCase_getMerchantWithoutKyc</span>
+                  <span class="parameters">(POS+softPOS,true,POS Channel - valid,success)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="crossCase_getMerchantWithoutKyc(softPOS, true, SOFTPOS Channel - valid, success)">
+                  </a> <!-- crossCase_getMerchantWithoutKyc(softPOS, true, SOFTPOS Channel - valid, success) -->
+                  <span class="method-name">crossCase_getMerchantWithoutKyc</span>
+                  <span class="parameters">(softPOS,true,SOFTPOS Channel - valid,success)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="crossCase_getMerchantWithoutKyc(POS, true, POS Channel - valid, success)">
+                  </a> <!-- crossCase_getMerchantWithoutKyc(POS, true, POS Channel - valid, success) -->
+                  <span class="method-name">crossCase_getMerchantWithoutKyc</span>
+                  <span class="parameters">(POS,true,POS Channel - valid,success)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteMerchants({shopDetails={isDelete=true}, merchantId=&#039;6911e87986c6910b389dbb68&#039;})">
+                  </a> <!-- deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb68'}) -->
+                  <span class="method-name">deleteMerchants</span>
+                  <span class="parameters">({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb68'})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteMerchants({shopDetails={isDelete=true}, merchantId=&#039;6911e88a86c6910b389dbc65&#039;})">
+                  </a> <!-- deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e88a86c6910b389dbc65'}) -->
+                  <span class="method-name">deleteMerchants</span>
+                  <span class="parameters">({shopDetails={isDelete=true}, merchantId='6911e88a86c6910b389dbc65'})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteMerchants({shopDetails={isDelete=true}, merchantId=&#039;6911e87986c6910b389dbb70&#039;})">
+                  </a> <!-- deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb70'}) -->
+                  <span class="method-name">deleteMerchants</span>
+                  <span class="parameters">({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb70'})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fetchDetails(0361073606400014, 7360640, null, 200, Details, false)">
+                  </a> <!-- fetchDetails(0361073606400014, 7360640, null, 200, Details, false) -->
+                  <span class="method-name">fetchDetails</span>
+                  <span class="parameters">(0361073606400014,7360640,null,200,Details,false)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateChannels(POS, true, POS Channel - valid, success)">
+                  </a> <!-- updateChannels(POS, true, POS Channel - valid, success) -->
+                  <span class="method-name">updateChannels</span>
+                  <span class="parameters">(POS,true,POS Channel - valid,success)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateChannels(POS+softPOS, true, POS Channel - valid, success)">
+                  </a> <!-- updateChannels(POS+softPOS, true, POS Channel - valid, success) -->
+                  <span class="method-name">updateChannels</span>
+                  <span class="parameters">(POS+softPOS,true,POS Channel - valid,success)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateChannels(softPOS, true, SOFTPOS Channel - valid, success)">
+                  </a> <!-- updateChannels(softPOS, true, SOFTPOS Channel - valid, success) -->
+                  <span class="method-name">updateChannels</span>
+                  <span class="parameters">(softPOS,true,SOFTPOS Channel - valid,success)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateConfirmPage(false, Confirm Page TC - disabled, failed)">
+                  </a> <!-- updateConfirmPage(false, Confirm Page TC - disabled, failed) -->
+                  <span class="method-name">updateConfirmPage</span>
+                  <span class="parameters">(false,Confirm Page TC - disabled,failed)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-...)">
+                  </a> <!-- updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(6911e85d86c6910b389db9f6,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,3,3,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,success,Valid KYC - SoftPOS,true,SOFTPOS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)">
+                  </a> <!-- updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(6911e85d86c6910b389db9f6,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,3,0,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,success,Valid KYC - POS,true,POS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)">
+                  </a> <!-- updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(6911e85d86c6910b389db9f6,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,0,0,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,failed,Min location - POS,true,POS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)">
+                  </a> <!-- updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-8098, A2, failed, ...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(68z96aa0fad5f8bf0b71063c,1f06e92e-e159-6dc0,7/36064/1,3,0,1f06e92e-ff3a-6c90-8098,A2,failed,Invalid KYC - POS,false,POS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)">
+                  </a> <!-- updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-8098, A2, failed, ...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(68z96aa0fad5f8bf0b71063c,1f06e92e-e159-6dc0,7/36064/1,3,3,1f06e92e-ff3a-6c90-8098,A2,failed,Invalid KYC - SoftPOS,false,SOFTPOS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 41, 0, 1f06e92e-ff3a-6c90...)">
+                  </a> <!-- updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 41, 0, 1f06e92e-ff3a-6c90...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(6911e85d86c6910b389db9f6,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,41,0,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,failed,Max location - POS,true,POS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 41, 1f06e92e-ff3a-6c90...)">
+                  </a> <!-- updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 41, 1f06e92e-ff3a-6c90...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(6911e85d86c6910b389db9f6,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,3,41,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,failed,Max location - SoftPOS,true,SOFTPOS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)">
+                  </a> <!-- updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...) -->
+                  <span class="method-name">updateKyc</span>
+                  <span class="parameters">(6911e85d86c6910b389db9f6,1f06e92e-e159-6dc0-fca2-aed39672ae12,7/36064/1,3,0,1f06e92e-ff3a-6c90-8098-b93b6f24752b,A1234567,failed,Min location - SoftPOS,true,SOFTPOS)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyOtpPage(0000, Salispay, Invalid OTP Test, failed)">
+                  </a> <!-- verifyOtpPage(0000, Salispay, Invalid OTP Test, failed) -->
+                  <span class="method-name">verifyOtpPage</span>
+                  <span class="parameters">(0000,Salispay,Invalid OTP Test,failed)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\abimanyu.r\AppData\Local\Temp\testng-eclipse-1518623571\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;ibportal.useAccount&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(33);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'crossCase_KycThenShopWithoutChannel')
+data.setCell(0, 2, 'ibportal.useAccount')
+data.setCell(0, 3, 31938);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'updateChannels')
+data.setCell(1, 2, 'ibportal.useAccount')
+data.setCell(1, 3, 6462);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'deleteMerchants')
+data.setCell(2, 2, 'ibportal.useAccount')
+data.setCell(2, 3, 6334);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'crossCase_getMerchantWithoutKyc')
+data.setCell(3, 2, 'ibportal.useAccount')
+data.setCell(3, 3, 6269);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'createOrUpdateShopDetails')
+data.setCell(4, 2, 'ibportal.useAccount')
+data.setCell(4, 3, 6186);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'createOrUpdateShopDetails')
+data.setCell(5, 2, 'ibportal.useAccount')
+data.setCell(5, 3, 5638);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'createOrUpdateAccount')
+data.setCell(6, 2, 'ibportal.useAccount')
+data.setCell(6, 3, 5601);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'updateChannels')
+data.setCell(7, 2, 'ibportal.useAccount')
+data.setCell(7, 3, 5325);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'crossCase_getMerchantWithoutKyc')
+data.setCell(8, 2, 'ibportal.useAccount')
+data.setCell(8, 3, 4931);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'updateKyc')
+data.setCell(9, 2, 'ibportal.useAccount')
+data.setCell(9, 3, 4709);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'updateKyc')
+data.setCell(10, 2, 'ibportal.useAccount')
+data.setCell(10, 3, 4668);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'updateKyc')
+data.setCell(11, 2, 'ibportal.useAccount')
+data.setCell(11, 3, 4308);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'updateChannels')
+data.setCell(12, 2, 'ibportal.useAccount')
+data.setCell(12, 3, 4203);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'crossCase_getComfirmationSubmissionWithoutKyc')
+data.setCell(13, 2, 'ibportal.useAccount')
+data.setCell(13, 3, 4150);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'updateKyc')
+data.setCell(14, 2, 'ibportal.useAccount')
+data.setCell(14, 3, 4144);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'createOrUpdateShopDetails')
+data.setCell(15, 2, 'ibportal.useAccount')
+data.setCell(15, 3, 4128);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'updateKyc')
+data.setCell(16, 2, 'ibportal.useAccount')
+data.setCell(16, 3, 3902);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'updateKyc')
+data.setCell(17, 2, 'ibportal.useAccount')
+data.setCell(17, 3, 3678);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifySubmitPage')
+data.setCell(18, 2, 'ibportal.useAccount')
+data.setCell(18, 3, 3633);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'updateKyc')
+data.setCell(19, 2, 'ibportal.useAccount')
+data.setCell(19, 3, 3529);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'updateKyc')
+data.setCell(20, 2, 'ibportal.useAccount')
+data.setCell(20, 3, 3461);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'updateKyc')
+data.setCell(21, 2, 'ibportal.useAccount')
+data.setCell(21, 3, 3354);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'crossCase_getMerchantWithoutKyc')
+data.setCell(22, 2, 'ibportal.useAccount')
+data.setCell(22, 3, 3244);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'deleteMerchants')
+data.setCell(23, 2, 'ibportal.useAccount')
+data.setCell(23, 3, 2997);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'verifyOtpPage')
+data.setCell(24, 2, 'ibportal.useAccount')
+data.setCell(24, 3, 2949);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'updateConfirmPage')
+data.setCell(25, 2, 'ibportal.useAccount')
+data.setCell(25, 3, 2455);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'deleteMerchants')
+data.setCell(26, 2, 'ibportal.useAccount')
+data.setCell(26, 3, 1665);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'createOrUpdateAccount')
+data.setCell(27, 2, 'ibportal.useAccount')
+data.setCell(27, 3, 1463);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'verifySubmitPage')
+data.setCell(28, 2, 'ibportal.useAccount')
+data.setCell(28, 3, 1443);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'verifyOtpPage')
+data.setCell(29, 2, 'ibportal.useAccount')
+data.setCell(29, 3, 1317);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'fetchDetails')
+data.setCell(30, 2, 'ibportal.useAccount')
+data.setCell(30, 3, 1310);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'updateConfirmPage')
+data.setCell(31, 2, 'ibportal.useAccount')
+data.setCell(31, 3, 1246);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'validateDeletedMerchants')
+data.setCell(32, 2, 'ibportal.useAccount')
+data.setCell(32, 3, 1124);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">ibportal.useAccount</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupEndpoints</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">createOrUpdateAccount(0361073606400014, 7360640, null, success, Valid Account, false)</span>
+                <span class="method-start">396 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createOrUpdateAccount(000107360641002, 7360640, null, failed, Invalid Account No, false)</span>
+                <span class="method-start">6000 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">crossCase_getMerchantWithoutKyc(softPOS, true, SOFTPOS Channel - valid, success)</span>
+                <span class="method-start">7474 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">crossCase_getMerchantWithoutKyc(POS, true, POS Channel - valid, success)</span>
+                <span class="method-start">13744 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">crossCase_getMerchantWithoutKyc(POS+softPOS, true, POS Channel - valid, success)</span>
+                <span class="method-start">18679 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">crossCase_getComfirmationSubmissionWithoutKyc</span>
+                <span class="method-start">21926 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">crossCase_KycThenShopWithoutChannel(6911e82686c6910b389db7e3, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)</span>
+                <span class="method-start">26081 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateChannels(softPOS, true, SOFTPOS Channel - valid, success)</span>
+                <span class="method-start">58022 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateChannels(POS, true, POS Channel - valid, success)</span>
+                <span class="method-start">63350 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateChannels(POS+softPOS, true, POS Channel - valid, success)</span>
+                <span class="method-start">67554 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)</span>
+                <span class="method-start">74018 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)</span>
+                <span class="method-start">78697 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 41, 0, 1f06e92e-ff3a-6c90...)</span>
+                <span class="method-start">82392 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)</span>
+                <span class="method-start">85748 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 0, 0, 1f06e92e-ff3a-6c90-...)</span>
+                <span class="method-start">90066 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(68z96aa0fad5f8bf0b71063c, 1f06e92e-e159-6dc0, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-8098, A2, failed, ...)</span>
+                <span class="method-start">93530 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 41, 1f06e92e-ff3a-6c90...)</span>
+                <span class="method-start">98240 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 3, 1f06e92e-ff3a-6c90-...)</span>
+                <span class="method-start">102385 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateKyc(6911e85d86c6910b389db9f6, 1f06e92e-e159-6dc0-fca2-aed39672ae12, 7/36064/1, 3, 0, 1f06e92e-ff3a-6c90-...)</span>
+                <span class="method-start">106292 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fetchDetails(0361073606400014, 7360640, null, 200, Details, false)</span>
+                <span class="method-start">109826 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb68'})</span>
+                <span class="method-start">126441 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb70'})</span>
+                <span class="method-start">128109 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deleteMerchants({shopDetails={isDelete=true}, merchantId='6911e88a86c6910b389dbc65'})</span>
+                <span class="method-start">134445 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateDeletedMerchants</span>
+                <span class="method-start">137450 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">createOrUpdateShopDetails({merchantId='6911e87986c6910b389dbb60', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...)</span>
+                <span class="method-start">153385 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createOrUpdateShopDetails({merchantId='6911e88a86c6910b389dbc55', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...)</span>
+                <span class="method-start">159574 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createOrUpdateShopDetails({merchantId='6911e88a86c6910b389dbc5d', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address=...)</span>
+                <span class="method-start">163703 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">updateConfirmPage(true, Confirm Page TC - enabled, success)</span>
+                <span class="method-start">169344 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">updateConfirmPage(false, Confirm Page TC - disabled, failed)</span>
+                <span class="method-start">171800 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyOtpPage(0000, Salispay, Invalid OTP Test, failed)</span>
+                <span class="method-start">173049 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyOtpPage(1211, Salispay, Valid OTP Test, success)</span>
+                <span class="method-start">175999 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySubmitPage(false, Submit Page Disabled Test, failed)</span>
+                <span class="method-start">177318 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySubmitPage(true, Submit Page Enabled Test, success)</span>
+                <span class="method-start">178764 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">182399 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

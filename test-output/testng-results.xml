@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="33" passed="25" failed="8" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-10T18:57:03 IST" name="Default suite" finished-at="2025-11-10T19:00:06 IST" duration-ms="182922">
+    <groups>
+    </groups>
+    <test started-at="2025-11-10T18:57:03 IST" name="Default test" finished-at="2025-11-10T19:00:06 IST" duration-ms="182922">
+      <class name="ibportal.useAccount">
+        <test-method is-config="true" signature="setupEndpoints()[pri:0, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:03 IST" name="setupEndpoints" finished-at="2025-11-10T18:57:03 IST" duration-ms="369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupEndpoints -->
+        <test-method signature="createOrUpdateAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:0, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:03 IST" name="createOrUpdateAccount" data-provider="accountData" finished-at="2025-11-10T18:57:09 IST" duration-ms="5601" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0361073606400014]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7360640]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Valid Account]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrUpdateAccount -->
+        <test-method signature="createOrUpdateAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:0, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:09 IST" name="createOrUpdateAccount" data-provider="accountData" finished-at="2025-11-10T18:57:10 IST" duration-ms="1463" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[000107360641002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7360640]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Invalid Account No]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrUpdateAccount -->
+        <test-method signature="crossCase_getMerchantWithoutKyc(java.lang.String,boolean,java.lang.String,java.lang.String)[pri:2, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:10 IST" name="crossCase_getMerchantWithoutKyc" data-provider="channelData" finished-at="2025-11-10T18:57:16 IST" duration-ms="6269" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[softPOS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SOFTPOS Channel - valid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- crossCase_getMerchantWithoutKyc -->
+        <test-method signature="crossCase_getMerchantWithoutKyc(java.lang.String,boolean,java.lang.String,java.lang.String)[pri:2, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:16 IST" name="crossCase_getMerchantWithoutKyc" data-provider="channelData" finished-at="2025-11-10T18:57:21 IST" duration-ms="4931" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[POS Channel - valid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- crossCase_getMerchantWithoutKyc -->
+        <test-method signature="crossCase_getMerchantWithoutKyc(java.lang.String,boolean,java.lang.String,java.lang.String)[pri:2, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:21 IST" name="crossCase_getMerchantWithoutKyc" data-provider="channelData" finished-at="2025-11-10T18:57:25 IST" duration-ms="3244" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[POS+softPOS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[POS Channel - valid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- crossCase_getMerchantWithoutKyc -->
+        <test-method signature="crossCase_getComfirmationSubmissionWithoutKyc()[pri:3, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:25 IST" name="crossCase_getComfirmationSubmissionWithoutKyc" finished-at="2025-11-10T18:57:29 IST" duration-ms="4150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- crossCase_getComfirmationSubmissionWithoutKyc -->
+        <test-method signature="crossCase_KycThenShopWithoutChannel(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:4, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:57:29 IST" name="crossCase_KycThenShopWithoutChannel" data-provider="kycDatas" finished-at="2025-11-10T18:58:01 IST" duration-ms="31938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e82686c6910b389db7e3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Valid KYC - POS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- crossCase_KycThenShopWithoutChannel -->
+        <test-method signature="updateChannels(java.lang.String,boolean,java.lang.String,java.lang.String)[pri:5, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:01 IST" name="updateChannels" data-provider="channelData" finished-at="2025-11-10T18:58:06 IST" duration-ms="5325" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[softPOS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SOFTPOS Channel - valid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateChannels -->
+        <test-method signature="updateChannels(java.lang.String,boolean,java.lang.String,java.lang.String)[pri:5, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:06 IST" name="updateChannels" data-provider="channelData" finished-at="2025-11-10T18:58:10 IST" duration-ms="4203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[POS Channel - valid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateChannels -->
+        <test-method signature="updateChannels(java.lang.String,boolean,java.lang.String,java.lang.String)[pri:5, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:10 IST" name="updateChannels" data-provider="channelData" finished-at="2025-11-10T18:58:17 IST" duration-ms="6462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[POS+softPOS]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[POS Channel - valid]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateChannels -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:17 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:21 IST" duration-ms="4668" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[68z96aa0fad5f8bf0b71063c]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A2]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Invalid KYC - POS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:21 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:25 IST" duration-ms="3678" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e85d86c6910b389db9f6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Min location - POS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Case: Min location - POS | Expected: failed | Actual: success expected [failed] but found [success]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Case: Min location - POS | Expected: failed | Actual: success expected [failed] but found [success]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at ibportal.useAccount.updateKyc(useAccount.java:433)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:25 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:28 IST" duration-ms="3354" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e85d86c6910b389db9f6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[41]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Max location - POS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:28 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:33 IST" duration-ms="4308" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e85d86c6910b389db9f6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Valid KYC - POS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:33 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:36 IST" duration-ms="3461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e85d86c6910b389db9f6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Min location - POS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[POS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:36 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:41 IST" duration-ms="4709" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[68z96aa0fad5f8bf0b71063c]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A2]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Invalid KYC - SoftPOS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SOFTPOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:41 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:45 IST" duration-ms="4144" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e85d86c6910b389db9f6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[41]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Max location - SoftPOS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SOFTPOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:45 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:49 IST" duration-ms="3902" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e85d86c6910b389db9f6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Valid KYC - SoftPOS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SOFTPOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="updateKyc(java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String)[pri:6, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:49 IST" name="updateKyc" data-provider="kycData" finished-at="2025-11-10T18:58:53 IST" duration-ms="3529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6911e85d86c6910b389db9f6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1f06e92e-e159-6dc0-fca2-aed39672ae12]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[7/36064/1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[1f06e92e-ff3a-6c90-8098-b93b6f24752b]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[A1234567]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Min location - SoftPOS]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[SOFTPOS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateKyc -->
+        <test-method signature="fetchDetails(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:7, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:58:53 IST" name="fetchDetails" data-provider="merchantData" finished-at="2025-11-10T18:58:54 IST" duration-ms="1310" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0361073606400014]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7360640]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[200]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Details]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fetchDetails -->
+        <test-method signature="deleteMerchants(payloads.DeleteShopPayload)[pri:8, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:09 IST" name="deleteMerchants" data-provider="deleteShopData" finished-at="2025-11-10T18:59:11 IST" duration-ms="1665" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb68'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMerchants -->
+        <test-method signature="deleteMerchants(payloads.DeleteShopPayload)[pri:8, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:11 IST" name="deleteMerchants" data-provider="deleteShopData" finished-at="2025-11-10T18:59:17 IST" duration-ms="6334" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{shopDetails={isDelete=true}, merchantId='6911e87986c6910b389dbb70'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMerchants -->
+        <test-method signature="deleteMerchants(payloads.DeleteShopPayload)[pri:8, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:17 IST" name="deleteMerchants" data-provider="deleteShopData" finished-at="2025-11-10T18:59:20 IST" duration-ms="2997" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{shopDetails={isDelete=true}, merchantId='6911e88a86c6910b389dbc65'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteMerchants -->
+        <test-method signature="validateDeletedMerchants()[pri:9, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:20 IST" name="validateDeletedMerchants" finished-at="2025-11-10T18:59:21 IST" depends-on-methods="ibportal.useAccount.deleteMerchants" duration-ms="1124" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[❌ No nested Merchants found for MID: 6911e87986c6910b389dbb68]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: ❌ No nested Merchants found for MID: 6911e87986c6910b389dbb68
+at ibportal.useAccount.validateDeletedMerchants(useAccount.java:549)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDeletedMerchants -->
+        <test-method signature="createOrUpdateShopDetails(payloads.ShopDetailsPayload)[pri:10, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:36 IST" name="createOrUpdateShopDetails" data-provider="shopDetailsData" finished-at="2025-11-10T18:59:42 IST" duration-ms="6186" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{merchantId='6911e87986c6910b389dbb60', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='272 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=711, noOfPOSDevices=1, softPOS=0, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrUpdateShopDetails -->
+        <test-method signature="createOrUpdateShopDetails(payloads.ShopDetailsPayload)[pri:10, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:42 IST" name="createOrUpdateShopDetails" data-provider="shopDetailsData" finished-at="2025-11-10T18:59:46 IST" duration-ms="4128" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{merchantId='6911e88a86c6910b389dbc55', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='273 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=813, noOfPOSDevices=0, softPOS=1, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Shop details creation failed expected [success] but found [failed]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Shop details creation failed expected [success] but found [failed]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at ibportal.useAccount.createOrUpdateShopDetails(useAccount.java:630)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrUpdateShopDetails -->
+        <test-method signature="createOrUpdateShopDetails(payloads.ShopDetailsPayload)[pri:10, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:46 IST" name="createOrUpdateShopDetails" data-provider="shopDetailsData" finished-at="2025-11-10T18:59:52 IST" duration-ms="5638" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{merchantId='6911e88a86c6910b389dbc5d', shopDetails={location='H7HV+W4X, Muscat 111, Oman', address='273 school street', area='adf', city='adfaf', state='685904ea36865acc72ccb3da', postalCode=813, noOfPOSDevices=0, softPOS=1, supervisorNumber='', terminalNumbers=[], businessVolume={min=1, max=10000}}}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Shop details creation failed expected [success] but found [failed]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Shop details creation failed expected [success] but found [failed]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at ibportal.useAccount.createOrUpdateShopDetails(useAccount.java:630)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrUpdateShopDetails -->
+        <test-method signature="updateConfirmPage(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:52 IST" name="updateConfirmPage" data-provider="confirmPageData" finished-at="2025-11-10T18:59:55 IST" duration-ms="2455" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Confirm Page TC - enabled]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status mismatch for test case: Confirm Page TC - enabled expected [success] but found [failed]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status mismatch for test case: Confirm Page TC - enabled expected [success] but found [failed]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at ibportal.useAccount.updateConfirmPage(useAccount.java:656)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateConfirmPage -->
+        <test-method signature="updateConfirmPage(java.lang.String,java.lang.String,java.lang.String)[pri:11, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:55 IST" name="updateConfirmPage" data-provider="confirmPageData" finished-at="2025-11-10T18:59:56 IST" duration-ms="1246" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Confirm Page TC - disabled]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateConfirmPage -->
+        <test-method signature="verifyOtpPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:56 IST" name="verifyOtpPage" data-provider="otpData" finished-at="2025-11-10T18:59:59 IST" duration-ms="2949" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[0000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Salispay]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid OTP Test]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOtpPage -->
+        <test-method signature="verifyOtpPage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:12, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T18:59:59 IST" name="verifyOtpPage" data-provider="otpData" finished-at="2025-11-10T19:00:00 IST" duration-ms="1317" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1211]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Salispay]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Valid OTP Test]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status mismatch for test case: Valid OTP Test expected [success] but found [failed]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status mismatch for test case: Valid OTP Test expected [success] but found [failed]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at ibportal.useAccount.verifyOtpPage(useAccount.java:675)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOtpPage -->
+        <test-method signature="verifySubmitPage(java.lang.String,java.lang.String,java.lang.String)[pri:13, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T19:00:00 IST" name="verifySubmitPage" data-provider="submitPageData" finished-at="2025-11-10T19:00:01 IST" duration-ms="1443" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Submit Page Disabled Test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[failed]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status mismatch for test case: Submit Page Disabled Test expected [failed] but found [success]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status mismatch for test case: Submit Page Disabled Test expected [failed] but found [success]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at ibportal.useAccount.verifySubmitPage(useAccount.java:695)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitPage -->
+        <test-method signature="verifySubmitPage(java.lang.String,java.lang.String,java.lang.String)[pri:13, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T19:00:01 IST" name="verifySubmitPage" data-provider="submitPageData" finished-at="2025-11-10T19:00:05 IST" duration-ms="3633" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Submit Page Enabled Test]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[success]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status mismatch for test case: Submit Page Enabled Test expected [success] but found [failed]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status mismatch for test case: Submit Page Enabled Test expected [success] but found [failed]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at ibportal.useAccount.verifySubmitPage(useAccount.java:695)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubmitPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ibportal.useAccount@74cec793]" started-at="2025-11-10T19:00:05 IST" name="tearDown" finished-at="2025-11-10T19:00:06 IST" duration-ms="485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ibportal.useAccount -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
