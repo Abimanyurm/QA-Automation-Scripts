@@ -144,10 +144,11 @@ public class useAccount extends BaseApi {
 				throw new SkipException("GM ID not found – skipping all remaining tests.");
 			}
 		}
-		
-		System.out.println("88888888888888888888");
-		System.out.println("99999999999999999999");
 
+//		
+//		System.out.println("Git update");
+//		System.out.println("Git update");
+		
 		Assert.assertEquals(response.jsonPath().getString("status"), expectedStatus,
 				"Status mismatch for test case: " + testCase);
 	}
