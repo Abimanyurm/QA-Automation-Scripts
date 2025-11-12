@@ -146,7 +146,7 @@ public class useAccount extends BaseApi {
 		}
 
 		
-		
+		System.out.println("Git update");
 		
 		Assert.assertEquals(response.jsonPath().getString("status"), expectedStatus,
 				"Status mismatch for test case: " + testCase);
